@@ -25,8 +25,18 @@ SECRET_KEY = 'django-insecure-usuhrpivhn4hg3vtn#wg9x4@yojp*)l56tx&#%i-h!8f6h9m#l
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-tendam-bakeboutique-iutsyrmxfyg.ws.codeinstitute-ide.net', 'localhost', '127.0.0.1']
+#ALLOWED_HOSTS = ['8000-tendam-bakeboutique-iutsyrmxfyg.ws.codeinstitute-ide.net', 'localhost', '127.0.0.1']
 
+ALLOWED_HOSTS = [
+    '8000-tendam-bakeboutique-iutsyrmxfyg.ws.codeinstitute-ide.net',
+    '8000-tendam-bakeboutique-s0n2zz0nudx.ws.codeinstitute-ide.net',  # Add the new domain
+    'localhost',
+    '127.0.0.1',
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-tendam-bakeboutique-s0n2zz0nudx.ws.codeinstitute-ide.net',
+]
 
 # Application definition
 
@@ -37,6 +47,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',  # Required for allauth
+    'allauth',               # Core allauth functionality
+    'allauth.account',       # Handles account management
+    'allauth.socialaccount', 
 ]
 
 MIDDLEWARE = [
@@ -59,13 +73,41 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request',
+                'django.template.context_processors.request', #required by allauth
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
         },
     },
 ]
+
+AUTHENTICATION_BACKENDS = [
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by email
+    'allauth.account.auth_backends.AuthenticationBackend',  
+]
+
+SITE_ID = 1
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# Allow users to log in with either username or email
+ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
+# Require email during signup
+ACCOUNT_EMAIL_REQUIRED = True
+# Make email verification mandatory for account activation
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+# Require users to enter their email address twice during signup for confirmation
+ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
+# Set minimum username length to 4 characters
+ACCOUNT_USERNAME_MIN_LENGTH = 4
+# URL where users are redirected to log in if unauthenticated
+LOGIN_URL = '/accounts/login/'
+# URL where users are redirected after successfully logging in
+LOGIN_REDIRECT_URL = '/'
+
 
 WSGI_APPLICATION = 'bake_boutique.wsgi.application'
 
