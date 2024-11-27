@@ -14,7 +14,12 @@ Product Model:
     price: The price of the product, using DecimalField for accuracy in monetary values.
     rating: A nullable rating field for customer reviews or ratings.
     image_url and image: Options to use either a URL or an uploaded image for product pictures."""
+
 class Category(models.Model):
+
+    class Meta:
+        verbose_name_plural = 'Categories'
+        
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
