@@ -1,75 +1,40 @@
-[
-    {
-        "pk": 1,
-        "model": "products.category",
-        "fields": {
-            "name": "cakes",
-            "friendly_name": "Cakes"
-        }
-    },
-    {
-        "pk": 2,
-        "model": "products.category",
-        "fields": {
-            "name": "cupcakes",
-            "friendly_name": "Cupcakes"
-        }
-    },
-    {
-        "pk": 3,
-        "model": "products.category",
-        "fields": {
-            "name": "cookies",
-            "friendly_name": "Cookies"
-        }
-    },
-    {
-        "pk": 4,
-        "model": "products.category",
-        "fields": {
-            "name": "muffins",
-            "friendly_name": "Muffins"
-        }
-    },
-    {
-        "pk": 5,
-        "model": "products.category",
-        "fields": {
-            "name": "pastries",
-            "friendly_name": "Pastries"
-        }
-    },
-    {
-        "pk": 6,
-        "model": "products.category",
-        "fields": {
-            "name": "specials",
-            "friendly_name": "Specials"
-        }
-    },
-    {
-        "pk": 7,
-        "model": "products.category",
-        "fields": {
-            "name": "gluten_free",
-            "friendly_name": "Gluten-Free"
-        }
-    },
-    {
-        "pk": 8,
-        "model": "products.category",
-        "fields": {
-            "name": "vegan",
-            "friendly_name": "Vegan"
-        }
-    },
-    {
-        "pk": 9,
-        "model": "products.category",
-        "fields": {
-            "name": "new_arrivals",
-            "friendly_name": "New Arrivals"
-        }
-    }
-]
+[{"pk": 1,
+ "model": "products.category", 
+"fields": {"name": "birthday_cakes",
+ "friendly_name": "Birthday Cakes"}}, 
 
+{"pk": 2, 
+"model": "products.category", 
+"fields": {"name": "wedding_cakes", 
+"friendly_name": "Wedding Cakes"}},
+ 
+{"pk": 3, 
+"model": "products.category", 
+"fields": {"name": "custom_cakes", 
+"friendly_name": "Custom Cakes"}},
+
+ {"pk": 4,
+ "model": "products.category", 
+"fields": {"name": "classic_cupcakes", 
+"friendly_name": "Classic Cupcakes"}},
+
+ {"pk": 5,
+ "model": "products.category", 
+"fields": {"name": "cookies",
+ "friendly_name": "Cookies"}}, 
+
+{"pk": 6, 
+"model": "products.category", 
+"fields": {"name": "holiday_specials", 
+"friendly_name": "Holiday Specials"}}, 
+
+{"pk": 7,
+ "model": "products.category",
+ "fields": {"name": "discounted_items", 
+"friendly_name": "Discounted Items"}}, 
+
+{"pk": 8, 
+"model": "products.category", 
+"fields": {"name": "custom_gift_packages", 
+"friendly_name": "Custom Gift Packages"}}
+]
