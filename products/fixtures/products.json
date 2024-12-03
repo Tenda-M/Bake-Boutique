@@ -1,352 +1,353 @@
 [
-   {
-       "pk": 1,
-       "model": "products.product",
-       "fields": {
-           "sku": "cake001",
-           "name": "Vanilla Cake",
-           "description": "A classic vanilla cake with a soft and fluffy texture, perfect for any celebration.",
-           "price": 32,
-           "category": 1,
-           "rating": 4.2,
-           "image_url": "https://bakeboutique.com/media/vanilla_cake.jpg",
-           "image": "vanilla_cake.png"
-       }
-   },
-   {
-       "pk": 2,
-       "model": "products.product",
-       "fields": {
-           "sku": "cake002",
-           "name": "Chocolate Cake",
-           "description": "Rich and moist chocolate cake, a favorite for chocoholics everywhere.",
-           "price": 34,
-           "category": 1,
-           "rating": 4.4,
-           "image_url": "https://bakeboutique.com/media/chocolate_cake.jpg",
-           "image": "chocolate_cake.png"
-       }
-   },
-   {
-       "pk": 3,
-       "model": "products.product",
-       "fields": {
-           "sku": "cake003",
-           "name": "Red Velvet Cake",
-           "description": "Traditionally a red, crimson, or scarlet-colored layer cake, layered with ermine icing or cream cheese icing.",
-           "price": 36,
-           "category": 1,
-           "rating": 4.6,
-           "image_url": "https://bakeboutique.com/media/red velvet_cake.jpg",
-           "image": "red_velvet_cake.png"
-       }
-   },
-   {
-       "pk": 4,
-       "model": "products.product",
-       "fields": {
-           "sku": "cake004",
-           "name": "Carrot Cake",
-           "description": "A moist and flavorful carrot cake with a hint of cinnamon and topped with cream cheese frosting.",
-           "price": 38,
-           "category": 1,
-           "rating": 4.8,
-           "image_url": "https://bakeboutique.com/media/carrot_cake.jpg",
-           "image": "carrot_cake.png"
-       }
-   },
-   {
-       "pk": 5,
-       "model": "products.product",
-       "fields": {
-           "sku": "cake005",
-           "name": "Black Forest Cake",
-           "description": "Layers of chocolate cake with cherries and whipped cream, inspired by the Black Forest region of Germany.",
-           "price": 40,
-           "category": 1,
-           "rating": 4.0,
-           "image_url": "https://bakeboutique.com/media/black forest_cake.jpg",
-           "image": "black_forest_cake.png"
-       }
-   },
-   {
-       "pk": 6,
-       "model": "products.product",
-       "fields": {
-           "sku": "cake006",
-           "name": "Cheesecake Cake",
-           "description": "A creamy and smooth cheesecake with a buttery graham cracker crust.",
-           "price": 42,
-           "category": 1,
-           "rating": 4.2,
-           "image_url": "https://bakeboutique.com/media/cheesecake_cake.jpg",
-           "image": "cheese_cake.png"
-       }
-   },
-   {
-       "pk": 7,
-       "model": "products.product",
-       "fields": {
-           "sku": "cake007",
-           "name": "Lemon Cake",
-           "description": "A zesty lemon cake with a tangy glaze, bursting with fresh citrus flavor.",
-           "price": 44,
-           "category": 1,
-           "rating": 4.4,
-           "image_url": "https://bakeboutique.com/media/lemon_cake.jpg",
-           "image": "lemon_cake.png"
-       }
-   },
-   {
-       "pk": 8,
-       "model": "products.product",
-       "fields": {
-           "sku": "cake008",
-           "name": "Marble Cake",
-           "description": "A beautiful swirl of vanilla and chocolate in a moist and flavorful marble cake.",
-           "price": 46,
-           "category": 1,
-           "rating": 4.6,
-           "image_url": "https://bakeboutique.com/media/marble_cake.jpg",
-           "image": "marble_cake.png"
-       }
-   },
-   {
-       "pk": 9,
-       "model": "products.product",
-       "fields": {
-           "sku": "cake009",
-           "name": "Coffee Cake",
-           "description": "A rich coffee-flavored cake, perfect for coffee lovers.",
-           "price": 48,
-           "category": 1,
-           "rating": 4.8,
-           "image_url": "https://bakeboutique.com/media/coffee_cake.jpg",
-           "image": "coffee_cake.png"
-       }
-   },
-   {
-       "pk": 10,
-       "model": "products.product",
-       "fields": {
-           "sku": "cake010",
-           "name": "Strawberry Cake",
-           "description": "A light and airy strawberry cake made with fresh strawberries.",
-           "price": 50,
-           "category": 1,
-           "rating": 4.0,
-           "image_url": "https://bakeboutique.com/media/strawberry_cake.jpg",
-           "image": "strawberry_cake.png"
-       }
-   },
-   {
-       "pk": 11,
-       "model": "products.product",
-       "fields": {
-           "sku": "cupcake011",
-           "name": "Vanilla Cupcakes",
-           "description": "Soft and fluffy vanilla cupcakes topped with a creamy buttercream frosting.",
-           "price": 16.5,
-           "category": 2,
-           "rating": 4.8,
-           "image_url": "https://bakeboutique.com/media/vanilla_cupcakes.jpg",
-           "image": "vanilla_cupcakes.jpg"
-       }
-   },
-   {
-       "pk": 12,
-       "model": "products.product",
-       "fields": {
-           "sku": "cupcake012",
-           "name": "Chocolate Cupcakes",
-           "description": "Rich chocolate cupcakes with a decadent chocolate ganache topping.",
-           "price": 18.0,
-           "category": 2,
-           "rating": 4.0,
-           "image_url": "https://bakeboutique.com/media/chocolate_cupcakes.jpg",
-           "image": "chocolate_cupcakes.jpg"
-       }
-   },
-   {
-       "pk": 13,
-       "model": "products.product",
-       "fields": {
-           "sku": "cupcake013",
-           "name": "Red Velvet Cupcakes",
-           "description": "Velvety red cupcakes topped with cream cheese frosting for a classic treat.",
-           "price": 19.5,
-           "category": 2,
-           "rating": 4.2,
-           "image_url": "https://bakeboutique.com/media/red velvet_cupcakes.jpg",
-           "image": "red velvet_cupcakes.jpg"
-       }
-   },
-   {
-       "pk": 14,
-       "model": "products.product",
-       "fields": {
-           "sku": "cupcake014",
-           "name": "Carrot Cupcakes",
-           "description": "Moist carrot cupcakes spiced with cinnamon and topped with cream cheese frosting.",
-           "price": 21.0,
-           "category": 2,
-           "rating": 4.5,
-           "image_url": "https://bakeboutique.com/media/carrot_cupcakes.jpg",
-           "image": "carrot_cupcakes.jpg"
-       }
-   },
-   {
-       "pk": 15,
-       "model": "products.product",
-       "fields": {
-           "sku": "cupcake015",
-           "name": "Lemon Cupcakes",
-           "description": "Zesty lemon cupcakes with a tangy lemon glaze and a hint of sweetness.",
-           "price": 15.0,
-           "category": 2,
-           "rating": 4.8,
-           "image_url": "https://bakeboutique.com/media/lemon_cupcakes.jpg",
-           "image": "lemon_cupcakes.jpg"
-       }
-   },
-   {
-       "pk": 16,
-       "model": "products.product",
-       "fields": {
-           "sku": "cupcake016",
-           "name": "Mocha Cupcakes",
-           "description": "Coffee and chocolate-infused cupcakes, perfect for a midday pick-me-up.",
-           "price": 16.5,
-           "category": 2,
-           "rating": 4.0,
-           "image_url": "https://bakeboutique.com/media/mocha_cupcakes.jpg",
-           "image": "mocha_cupcakes.jpg"
-       }
-   },
-   {
-       "pk": 17,
-       "model": "products.product",
-       "fields": {
-           "sku": "cupcake017",
-           "name": "Raspberry Cupcakes",
-           "description": "Sweet and tangy raspberry cupcakes with a swirl of raspberry buttercream.",
-           "price": 18.0,
-           "category": 2,
-           "rating": 4.2,
-           "image_url": "https://bakeboutique.com/media/raspberry_cupcakes.jpg",
-           "image": "raspberry_cupcakes.jpg"
-       }
-   },
-   {
-       "pk": 18,
-       "model": "products.product",
-       "fields": {
-           "sku": "cupcake018",
-           "name": "Peanut Butter Cupcakes",
-           "description": "Rich peanut butter cupcakes topped with a creamy peanut butter frosting.",
-           "price": 19.5,
-           "category": 2,
-           "rating": 4.5,
-           "image_url": "https://bakeboutique.com/media/peanut butter_cupcakes.jpg",
-           "image": "peanut butter_cupcakes.jpg"
-       }
-   },
-   {
-       "pk": 19,
-       "model": "products.product",
-       "fields": {
-           "sku": "cupcake019",
-           "name": "Mint Cupcakes",
-           "description": "Refreshing mint-flavored cupcakes with a swirl of minty frosting.",
-           "price": 21.0,
-           "category": 2,
-           "rating": 4.8,
-           "image_url": "https://bakeboutique.com/media/mint_cupcakes.jpg",
-           "image": "mint_cupcakes.jpg"
-       }
-   },
-   {
-       "pk": 20,
-       "model": "products.product",
-       "fields": {
-           "sku": "cupcake020",
-           "name": "Coconut Cupcakes",
-           "description": "Light and fluffy coconut cupcakes with a toasted coconut topping.",
-           "price": 15.0,
-           "category": 2,
-           "rating": 4.0,
-           "image_url": "https://bakeboutique.com/media/coconut_cupcakes.jpg",
-           "image": "coconut_cupcakes.jpg"
-       }
-   },
-   {
-       "pk": 21,
-       "model": "products.product",
-       "fields": {
-           "sku": "cookie021",
-           "name": "Chocolate Chip Cookies",
-           "description": "Classic chocolate chip cookies with gooey chocolate chunks in every bite.",
-           "price": 10.0,
-           "category": 3,
-           "rating": 3.8,
-           "image_url": "https://bakeboutique.com/media/chocolate_chip_cookies.jpg",
-           "image": "chocolate_chip_cookies.jpg"
-       }
-   },
-   {
-       "pk": 22,
-       "model": "products.product",
-       "fields": {
-           "sku": "cookie022",
-           "name": "Oatmeal Raisin Cookies",
-           "description": "Chewy oatmeal raisin cookies with a hint of cinnamon, perfect for a wholesome treat.",
-           "price": 12.0,
-           "category": 3,
-           "rating": 4.1,
-           "image_url": "https://bakeboutique.com/media/oatmeal_raisin_cookies.jpg",
-           "image": "oatmeal_raisin_cookies.jpg"
-       }
-   },
-   {
-       "pk": 23,
-       "model": "products.product",
-       "fields": {
-           "sku": "cookie023",
-           "name": "Sugar Cookies",
-           "description": "Soft sugar cookies with a sprinkle of sugar for a sweet finish.",
-           "price": 14.0,
-           "category": 3,
-           "rating": 4.4,
-           "image_url": "https://bakeboutique.com/media/sugar_cookies.jpg",
-           "image": "sugar_cookies.jpg"
-       }
-   },
-   {
-       "pk": 24,
-       "model": "products.product",
-       "fields": {
-           "sku": "cookie024",
-           "name": "Peanut Butter Cookies",
-           "description": "Rich and nutty peanut butter cookies with a melt-in-your-mouth texture.",
-           "price": 10.0,
-           "category": 3,
-           "rating": 3.5,
-           "image_url": "https://bakeboutique.com/media/peanut_butter_cookies.jpg",
-           "image": "peanut_butter_cookies.jpg"
-       }
-   },
-   {
-       "pk": 25,
-       "model": "products.product",
-       "fields": {
-           "sku": "cookie025",
-           "name": "Gingerbread Cookies",
-           "description": "Spiced gingerbread cookies, perfect for the holiday season.",
-           "price": 12.0,
-           "category": 3,
-           "rating": 3.8,
-           "image_url": "https://bakeboutique.com/media/gingerbread_cookies.jpg",
-           "image": "gingerbread_cookies.jpg"
-       }
-   }
-]
+    {
+        "pk": 1,
+        "model": "products.product",
+        "fields": {
+            "sku": "cake001",
+            "name": "Vanilla Cake",
+            "description": "A classic vanilla cake with a soft and fluffy texture, perfect for any celebration.",
+            "price": 32,
+            "category": 1,
+            "rating": 4.2,
+            "image_url": "https://bakeboutique.com/media/vanilla_cake.jpg",
+            "image": "vanilla_cake.png"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.product",
+        "fields": {
+            "sku": "cake002",
+            "name": "Chocolate Cake",
+            "description": "Rich and moist chocolate cake, a favorite for chocoholics everywhere.",
+            "price": 34,
+            "category": 1,
+            "rating": 4.4,
+            "image_url": "https://bakeboutique.com/media/chocolate_cake.jpg",
+            "image": "chocolate_cake.png"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.product",
+        "fields": {
+            "sku": "cake003",
+            "name": "Red Velvet Cake",
+            "description": "Traditionally a red, crimson, or scarlet-colored layer cake, layered with ermine icing or cream cheese icing.",
+            "price": 36,
+            "category": 1,
+            "rating": 4.6,
+            "image_url": "https://bakeboutique.com/media/red velvet_cake.jpg",
+            "image": "red_velvet_cake.png"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.product",
+        "fields": {
+            "sku": "cake004",
+            "name": "Carrot Cake",
+            "description": "A moist and flavorful carrot cake with a hint of cinnamon and topped with cream cheese frosting.",
+            "price": 38,
+            "category": 1,
+            "rating": 4.8,
+            "image_url": "https://bakeboutique.com/media/carrot_cake.jpg",
+            "image": "carrot_cake.png"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.product",
+        "fields": {
+            "sku": "cake005",
+            "name": "Black Forest Cake",
+            "description": "Layers of chocolate cake with cherries and whipped cream, inspired by the Black Forest region of Germany.",
+            "price": 40,
+            "category": 1,
+            "rating": 4.0,
+            "image_url": "https://bakeboutique.com/media/black forest_cake.jpg",
+            "image": "black_forest_cake.png"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.product",
+        "fields": {
+            "sku": "cake006",
+            "name": "Cheesecake Cake",
+            "description": "A creamy and smooth cheesecake with a buttery graham cracker crust.",
+            "price": 42,
+            "category": 1,
+            "rating": 4.2,
+            "image_url": "https://bakeboutique.com/media/cheesecake_cake.jpg",
+            "image": "cheese_cake.png"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "products.product",
+        "fields": {
+            "sku": "cake007",
+            "name": "Lemon Cake",
+            "description": "A zesty lemon cake with a tangy glaze, bursting with fresh citrus flavor.",
+            "price": 44,
+            "category": 1,
+            "rating": 4.4,
+            "image_url": "https://bakeboutique.com/media/lemon_cake.jpg",
+            "image": "lemon_cake.png"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "products.product",
+        "fields": {
+            "sku": "cake008",
+            "name": "Marble Cake",
+            "description": "A beautiful swirl of vanilla and chocolate in a moist and flavorful marble cake.",
+            "price": 46,
+            "category": 1,
+            "rating": 4.6,
+            "image_url": "https://bakeboutique.com/media/marble_cake.jpg",
+            "image": "marble_cake.png"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "products.product",
+        "fields": {
+            "sku": "cake009",
+            "name": "Coffee Cake",
+            "description": "A rich coffee-flavored cake, perfect for coffee lovers.",
+            "price": 48,
+            "category": 1,
+            "rating": 4.8,
+            "image_url": "https://bakeboutique.com/media/coffee_cake.jpg",
+            "image": "coffee_cake.png"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "products.product",
+        "fields": {
+            "sku": "cake010",
+            "name": "Strawberry Cake",
+            "description": "A light and airy strawberry cake made with fresh strawberries.",
+            "price": 50,
+            "category": 1,
+            "rating": 4.0,
+            "image_url": "https://bakeboutique.com/media/strawberry_cake.jpg",
+            "image": "strawberry_cake.png"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "products.product",
+        "fields": {
+            "sku": "cupcake011",
+            "name": "Vanilla Cupcakes",
+            "description": "Soft and fluffy vanilla cupcakes topped with a creamy buttercream frosting.",
+            "price": 16.5,
+            "category": 4,
+            "rating": 4.8,
+            "image_url": "https://bakeboutique.com/media/vanilla_cupcakes.jpg",
+            "image": "vanilla_cupcakes.png"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "products.product",
+        "fields": {
+            "sku": "cupcake012",
+            "name": "Chocolate Cupcakes",
+            "description": "Rich chocolate cupcakes with a decadent chocolate ganache topping.",
+            "price": 18.0,
+            "category": 4,
+            "rating": 4.0,
+            "image_url": "https://bakeboutique.com/media/chocolate_cupcakes.jpg",
+            "image": "chocolate_cupcakes.png"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "products.product",
+        "fields": {
+            "sku": "cupcake013",
+            "name": "Red Velvet Cupcakes",
+            "description": "Velvety red cupcakes topped with cream cheese frosting for a classic treat.",
+            "price": 19.5,
+            "category": 4,
+            "rating": 4.2,
+            "image_url": "https://bakeboutique.com/media/red velvet_cupcakes.jpg",
+            "image": "red_velvet_cupcakes.png"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "products.product",
+        "fields": {
+            "sku": "cupcake014",
+            "name": "Carrot Cupcakes",
+            "description": "Moist carrot cupcakes spiced with cinnamon and topped with cream cheese frosting.",
+            "price": 21.0,
+            "category": 4,
+            "rating": 4.5,
+            "image_url": "https://bakeboutique.com/media/carrot_cupcakes.jpg",
+            "image": "carrot_cupcakes.png"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "products.product",
+        "fields": {
+            "sku": "cupcake015",
+            "name": "Lemon Cupcakes",
+            "description": "Zesty lemon cupcakes with a tangy lemon glaze and a hint of sweetness.",
+            "price": 15.0,
+            "category": 4,
+            "rating": 4.8,
+            "image_url": "https://bakeboutique.com/media/lemon_cupcakes.jpg",
+            "image": "lemon_cake.png"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "products.product",
+        "fields": {
+            "sku": "cupcake016",
+            "name": "Mocha Cupcakes",
+            "description": "Coffee and chocolate-infused cupcakes, perfect for a midday pick-me-up.",
+            "price": 16.5,
+            "category": 4,
+            "rating": 4.0,
+            "image_url": "https://bakeboutique.com/media/mocha_cupcakes.jpg",
+            "image": "mocha_cupcakes.png"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "products.product",
+        "fields": {
+            "sku": "cupcake017",
+            "name": "Raspberry Cupcakes",
+            "description": "Sweet and tangy raspberry cupcakes with a swirl of raspberry buttercream.",
+            "price": 18.0,
+            "category": 4,
+            "rating": 4.2,
+            "image_url": "https://bakeboutique.com/media/raspberry_cupcakes.jpg",
+            "image": "raspberry_cupcakes.png"
+        }
+    },
+    {
+        "pk": 18,
+        "model": "products.product",
+        "fields": {
+            "sku": "cupcake018",
+            "name": "Peanut Butter Cupcakes",
+            "description": "Rich peanut butter cupcakes topped with a creamy peanut butter frosting.",
+            "price": 19.5,
+            "category": 4,
+            "rating": 4.5,
+            "image_url": "https://bakeboutique.com/media/peanut butter_cupcakes.jpg",
+            "image": "peanut_butter_cupcakes.png"
+        }
+    },
+    {
+        "pk": 19,
+        "model": "products.product",
+        "fields": {
+            "sku": "cupcake019",
+            "name": "Mint Cupcakes",
+            "description": "Refreshing mint-flavored cupcakes with a swirl of minty frosting.",
+            "price": 21.0,
+            "category": 4,
+            "rating": 4.8,
+            "image_url": "https://bakeboutique.com/media/mint_cupcakes.jpg",
+            "image": "mint_cupcakes.png"
+        }
+    },
+    {
+        "pk": 20,
+        "model": "products.product",
+        "fields": {
+            "sku": "cupcake020",
+            "name": "Coconut Cupcakes",
+            "description": "Light and fluffy coconut cupcakes with a toasted coconut topping.",
+            "price": 15.0,
+            "category": 4,
+            "rating": 4.0,
+            "image_url": "https://bakeboutique.com/media/coconut_cupcakes.jpg",
+            "image": "coconut_cupcakes.png"
+        }
+    },
+    {
+        "pk": 21,
+        "model": "products.product",
+        "fields": {
+            "sku": "cookie021",
+            "name": "Chocolate Chip Cookies",
+            "description": "Classic chocolate chip cookies with gooey chocolate chunks in every bite.",
+            "price": 10.0,
+            "category": 5,
+            "rating": 3.8,
+            "image_url": "https://bakeboutique.com/media/chocolate_chip_cookies.jpg",
+            "image": "chocolate_chip_cookies.png"
+        }
+    },
+    {
+        "pk": 22,
+        "model": "products.product",
+        "fields": {
+            "sku": "cookie022",
+            "name": "Oatmeal Raisin Cookies",
+            "description": "Chewy oatmeal raisin cookies with a hint of cinnamon, perfect for a wholesome treat.",
+            "price": 12.0,
+            "category": 5,
+            "rating": 4.1,
+            "image_url": "https://bakeboutique.com/media/oatmeal_raisin_cookies.jpg",
+            "image": "oatmeal_raisin_cookies.png"
+        }
+    },
+    {
+        "pk": 23,
+        "model": "products.product",
+        "fields": {
+            "sku": "cookie023",
+            "name": "Sugar Cookies",
+            "description": "Soft sugar cookies with a sprinkle of sugar for a sweet finish.",
+            "price": 14.0,
+            "category": 5,
+            "rating": 4.4,
+            "image_url": "https://bakeboutique.com/media/sugar_cookies.jpg",
+            "image": "sugar_cookies.png"
+        }
+    },
+    {
+        "pk": 24,
+        "model": "products.product",
+        "fields": {
+            "sku": "cookie024",
+            "name": "Peanut Butter Cookies",
+            "description": "Rich and nutty peanut butter cookies with a melt-in-your-mouth texture.",
+            "price": 10.0,
+            "category": 5,
+            "rating": 3.5,
+            "image_url": "https://bakeboutique.com/media/peanut_butter_cookies.jpg",
+            "image": "peanut_butter_cookies.png"
+        }
+    },
+    {
+        "pk": 25,
+        "model": "products.product",
+        "fields": {
+            "sku": "cookie025",
+            "name": "Gingerbread Cookies",
+            "description": "Spiced gingerbread cookies, perfect for the holiday season.",
+            "price": 12.0,
+            "category": 5,
+            "rating": 3.8,
+            "image_url": "https://bakeboutique.com/media/gingerbread_cookies.jpg",
+            "image": "gingerbread_cookies.png"
+        }
+    }
+ ]
+ 
