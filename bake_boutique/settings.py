@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
 from dotenv import load_dotenv  # Ensure this line is included for the env file with the stripe keys
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,16 +26,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-usuhrpivhn4hg3vtn#wg9x4@yojp*)l56tx&#%i-h!8f6h9m#l'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 #ALLOWED_HOSTS = ['8000-tendam-bakeboutique-iutsyrmxfyg.ws.codeinstitute-ide.net', 'localhost', '127.0.0.1']
 
 ALLOWED_HOSTS = [
     '8000-tendam-bakeboutique-iutsyrmxfyg.ws.codeinstitute-ide.net',
     '8000-tendam-bakeboutique-s0n2zz0nudx.ws.codeinstitute-ide.net',  # Add the new domain
+    'my-project4-bake-boutique-8d47b339b2ab.herokuapp.com',
     'localhost',
     '127.0.0.1',
 ]
+
 
 CSRF_TRUSTED_ORIGINS = [
     'https://8000-tendam-bakeboutique-s0n2zz0nudx.ws.codeinstitute-ide.net',
@@ -140,12 +143,17 @@ WSGI_APPLICATION = 'bake_boutique.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 
 
 # Password validation
