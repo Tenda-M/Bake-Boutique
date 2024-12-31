@@ -1,0 +1,74 @@
+[33m50a43c1[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m Removed accidental backup-repo clone
+[33m7a34c37[m[33m ([m[1;31mheroku/main[m[33m)[m Remove upload_static.py from Git cache
+[33m63b8c94[m Trigger Heroku redeployment
+[33m702f4f1[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Edit bucket Config
+[33m5c4b124[m Trigger Heroku redeployment
+[33mf888afe[m Add STATIC_ROOT and fix AWS configurations
+[33mc19023a[m Fix static files configuration
+[33m24ab528[m Edit settings.py slash comment
+[33m9338bd8[m Add cache control
+[33mda6a10d[m Edit aws bucket config
+[33m88a5674[m Edit secret key
+[33m039be65[m Fix Procfile module name
+[33m18e341b[m Update django-crispy-forms to >=2.3
+[33m3c954ff[m Initial heroku deploy
+[33m3e06151[m Product admin- fix product image part 2
+[33mf68a33e[m Product admin- fix product image
+[33mfe36043[m Product admin- secure product views
+[33m1b662c3[m Product admin- delete product functionality
+[33mc0ff4b6[m Product admin- edit product functionality
+[33m9344b29[m Product admin- add product functionality
+[33mecafe19[m Product admin- add product view and urls
+[33mf5c020b[m add product form
+[33meaee297[m Complete confirmation email
+[33m3112971[m update profile webhook handler
+[33m2d59ed3[m update profile address and views
+[33mf84a7a4[m Add profile form, views and update template
+[33md5fc661[m Update and test auth templates
+[33mdc83139[m add profile app
+[33mf4aae60[m Update checkout form
+[33m45ccb8c[m complete webhook handler
+[33m09c0d47[m Add checkout form data caching in payment intent
+[33m25adc3c[m Add class methods to webhook handler and webhook view
+[33ma57c89c[m Add webhook handler
+[33m22b5f7d[m Add loading overlay
+[33me8738b2[m Add order summary on checkout success page
+[33m2b4f7be[m Add checkout success logic
+[33mc534a8d[m Add .env to .gitignore and ensure sensitive environment variables are excluded
+[33m152bab9[m add basic checkout functionality
+[33m3b89fa6[m Add stripe elements
+[33m8f523f4[m Add checkout views and temlates
+[33m17fbf91[m Add Admin, Signals and Forms
+[33m5e888c5[m create checkout app and models
+[33m7e15e4a[m add CSS notification
+[33mff5adad[m add toasts
+[33maa511b7[m add subtotal filter to shopping bag page
+[33mcb67509[m add quantity boxes to shopping bag page
+[33m2d2def2[m add quantity +/- input buttons
+[33m6973f1a[m Edit  product size logic
+[33m355e005[m Update product logic to handle 'has_sizes' field for cakes, cookies, and cupcakes
+[33m70b57c9[m update context processor and update shopping bag template
+[33m18b5df6[m Add the function for add to bag
+[33me8a21f4[m Add shopping bag context and delivery logic
+[33maec0cff[m Add shopping bag app, urls and templet
+[33mb8854f1[m Add sorting JS and back to top link
+[33m59551bc[m Add sorting and product counts
+[33mddca2b1[m Add sorting
+[33mca64709[m Add cupcakes images
+[33mb8debd5[m Add search functionality
+[33m5f0715c[m Add product images for cake
+[33m7902db0[m add product detain functionality
+[33m66b7467[m Start product template
+[33m5cf8ced[m Add product templet and views
+[33me11f989[m customise Admin
+[33m6ddacdc[m Added Category and Product models with fields
+[33m374a04d[m Add nav-bar and header
+[33m3150182[m Home page and css complete
+[33m3486ff5[m Add add home page header
+[33m2cf9adf[m Add add home page content
+[33m5706a01[m Add add home app and templates
+[33mbf159f1[m Add blocks, navigation header and message container to base.html
+[33m1ed5dab[m Add Bootstrap setup and create base.html template
+[33m10e317f[m Set up django-allauth with custom templates for authentication
+[33mdd1eb1c[m Set up initial Django project structure, applied migrations, and created superuser
+[33md9f2670[m Initial commit

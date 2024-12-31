@@ -1,0 +1,29 @@
+[33m50a43c1[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m Removed accidental backup-repo clone
+[33m7a34c37[m[33m ([m[1;31mheroku/main[m[33m)[m Remove upload_static.py from Git cache
+[33m63b8c94[m Trigger Heroku redeployment
+[33m702f4f1[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Edit bucket Config
+[33m5c4b124[m Trigger Heroku redeployment
+[33mf888afe[m Add STATIC_ROOT and fix AWS configurations
+[33mc19023a[m Fix static files configuration
+[33m24ab528[m Edit settings.py slash comment
+[33m9338bd8[m Add cache control
+[33mda6a10d[m Edit aws bucket config
+[33m88a5674[m Edit secret key
+[33m039be65[m Fix Procfile module name
+[33m18e341b[m Update django-crispy-forms to >=2.3
+[33m3c954ff[m Initial heroku deploy
+[33m3e06151[m Product admin- fix product image part 2
+[33mf68a33e[m Product admin- fix product image
+[33mfe36043[m Product admin- secure product views
+[33m1b662c3[m Product admin- delete product functionality
+[33mc0ff4b6[m Product admin- edit product functionality
+[33m9344b29[m Product admin- add product functionality
+[33mecafe19[m Product admin- add product view and urls
+[33mf5c020b[m add product form
+[33meaee297[m Complete confirmation email
+[33m3112971[m update profile webhook handler
+[33m2d59ed3[m update profile address and views
+[33mf84a7a4[m Add profile form, views and update template
+[33md5fc661[m Update and test auth templates
+[33mdc83139[m add profile app
+[33mf4aae60[m Update checkout form
