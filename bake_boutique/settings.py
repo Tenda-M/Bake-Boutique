@@ -15,6 +15,9 @@ import os
 import dj_database_url
 from dotenv import load_dotenv  # Ensure this line is included for the env file with the stripe keys
 
+if os.path.exists("env.py"):
+    import env
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -24,7 +27,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 #SECRET_KEY = 'django-insecure-usuhrpivhn4hg3vtn#wg9x4@yojp*)l56tx&#%i-h!8f6h9m#l'
-SECRET_KEY = os.environ.get('SECRET_KEY', '')
+#SECRET_KEY = os.environ.get('SECRET_KEY', '')
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
@@ -259,4 +263,4 @@ else:
     DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
 
 
-#APPEND_SLASH = True  # This is the default value. Change to False if necessary.
+#APPEND_SLASH = True  # This is the default value. Change to Fal
