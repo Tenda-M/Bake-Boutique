@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1>Testimonials</h1>
+
+    <!-- Add Write Testimonial Button -->
+    <div class="mb-3">
+        <a href="{% url 'add_testimonial' %}" class="btn btn-primary">Write a Testimonial</a>
+    </div>
+
+    <!-- Display Testimonials -->
+    {% for testimonial in testimonials %}
+        <div class="testimonial">
+            <h4>{{ testimonial.name }}</h4>
+            <p>{{ testimonial.content }}</p>
+            <small>Submitted on {{ testimonial.created_on }}</small>
+            {% if testimonial.approved %}
+                <span class="badge bg-success">Approved</span>
+            {% else %}
+                <span class="badge bg-warning">Pending Approval</span>
+            {% endif %}
+        </div>
+        <hr>
+    {% empty %}
+        <p>No testimonials available. Be the first to write one!</p>
+    {% endfor %}
+</div>
+{% endblock %}
