@@ -14,6 +14,7 @@ def testimonial_list(request):
         'testimonials': testimonials
     })
 
+
 def add_testimonial(request):
     if request.method == "POST":
         form = TestimonialForm(request.POST)
@@ -23,13 +24,3 @@ def add_testimonial(request):
     else:
         form = TestimonialForm()
     return render(request, "testimonials/testimonial_form.html", {"form": form, "page_title": "Add Testimonial"})
-
-def submit_testimonial(request):
-    if request.method == "POST":
-        form = TestimonialForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect("testimonial_list") # Redirect to the testimonials list
-    else:
-        form = TestimonialForm()
-    return render(request, "testimonials/testimonial_form.html", {"form": form, "page_title": "Submit Your Testimonial"})

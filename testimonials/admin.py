@@ -3,9 +3,9 @@ from .models import Testimonial
 
 @admin.register(Testimonial)
 class TestimonialAdmin(admin.ModelAdmin):
-    list_display = ('name', 'email', 'approved', 'created_on')
-    list_filter = ('approved', 'created_on')
-    search_fields = ('name', 'email', 'content')
+    list_display = ('name', 'approved', 'created_at')  
+    list_filter = ('approved', 'created_at')  
+    search_fields = ('name', 'content')  
     actions = ['approve_testimonials']
 
     def approve_testimonials(self, request, queryset):
