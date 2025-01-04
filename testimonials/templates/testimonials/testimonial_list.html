@@ -1,29 +1,43 @@
 {% extends "base.html" %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'testimonials/css/testimonial.css' %}">
+{% endblock %}
 
 {% block content %}
-<div class="container mt-5">
-    <h1>Testimonials</h1>
+<div class="testimonial-section">
+    <!-- Header Section -->
+    <h1>What Say Our Clients</h1>
 
     <!-- Add Write Testimonial Button -->
     <div class="mb-3">
         <a href="{% url 'add_testimonial' %}" class="btn btn-primary">Write a Testimonial</a>
     </div>
 
-    <!-- Display Testimonials -->
-    {% for testimonial in testimonials %}
-        <div class="testimonial">
-            <h4>{{ testimonial.name }}</h4>
-            <p>{{ testimonial.content }}</p>
-            <small>Submitted on {{ testimonial.created_on }}</small>
-            {% if testimonial.approved %}
-                <span class="badge bg-success">Approved</span>
-            {% else %}
-                <span class="badge bg-warning">Pending Approval</span>
-            {% endif %}
+       <!-- Testimonial Grid -->
+       <div class="testimonial-grid">
+        {% for testimonial in testimonials %}
+        <div class="testimonial-card">
+            <p class="testimonial-content">{{ testimonial.content }}</p>
+            <div class="testimonial-author">{{ testimonial.name }}</div>
+            <span class="badge-approved">Approved</span>
         </div>
-        <hr>
-    {% empty %}
+        {% empty %}
         <p>No testimonials available. Be the first to write one!</p>
-    {% endfor %}
+        {% endfor %}
+    </div>
+
+    <!-- Pagination -->
+    <div class="pagination">
+        {% if testimonials.has_previous %}
+        <a href="?page={{ testimonials.previous_page_number }}">&laquo;</a>
+        {% endif %}
+        {% for num in testimonials.paginator.page_range %}
+        <a href="?page={{ num }}" class="{% if testimonials.number == num %}active{% endif %}">{{ num }}</a>
+        {% endfor %}
+        {% if testimonials.has_next %}
+        <a href="?page={{ testimonials.next_page_number }}">&raquo;</a>
+        {% endif %}
+    </div>
 </div>
 {% endblock %}

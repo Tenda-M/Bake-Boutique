@@ -1,5 +1,8 @@
-<!-- templates/testimonials/testimonial_form.html -->
 {% extends "base.html" %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'testimonials/css/testimonial.css' %}">
+{% endblock %}
 
 {% block content %}
 <div class="container mt-5">

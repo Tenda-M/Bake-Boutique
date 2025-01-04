@@ -1,0 +1,132 @@
+/******************************* Testimonial Page Styles ************************/
+/* Center the grid container */
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* Space between cards */
+    justify-content: center; /* Center the grid horizontally */
+    max-width: 1200px; /* Limit the width of the grid */
+    width: 100%;
+}
+
+/* General styling for testimonial cards */
+.testimonial-card {
+    background: #fff; /* White background for contrast */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.testimonial-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Styling for testimonial content */
+.testimonial-content {
+    font-size: 1em;
+    color: #333; /* Neutral text color */
+    margin-bottom: 10px;
+}
+
+/* Styling for the author */
+.testimonial-author {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Badge for approved testimonials */
+.badge-approved {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 12px;
+    background-color: #28a745; /* Green for approval */
+    color: white;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+/* Center the testimonial section on the page */
+.testimonial-section {
+    margin-top: 180px; /* Increase spacing from the navbar */
+    text-align: center; /* Center the text content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: none; /* Ensure no background image */
+}
+
+.testimonial-section h1 {
+    margin-bottom: 30px; /* Increase space between heading and button */
+    color: #000; /* Set the text color to black */
+}
+
+.mb-3 {
+    margin-bottom: 40px; /* Add spacing below the button */
+}
+
+
+/* Pagination styling */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px; /* Add space above the pagination */
+    justify-content: center;
+}
+
+.pagination a {
+    margin: 0 5px;
+    padding: 8px 12px;
+    background: #f8f8f8;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.pagination a:hover,
+.pagination a.active {
+    background-color: #5a2d82; /* Match site color */
+    color: white;
+}
+
+/* Button styling to match the site */
+.btn-primary {
+    background-color: #000; /* Black */
+    border-color: #000;
+    color: white;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #222; /* Slightly darker black */
+    border-color: #222;
+}
+
+
+/******************** Media query for responsiveness ********************/
+
+@media (max-width: 1024px) {
+    .testimonial-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium-sized screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonial-grid {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+    .testimonial-section {
+        margin-top: 60px; /* Adjust for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .testimonial-grid {
+        grid-template-columns: 1fr; /* 1 column on very small screens */
+    }
+}
