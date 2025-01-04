@@ -7,15 +7,15 @@
 {% block content %}
 <div class="testimonial-section">
     <!-- Header Section -->
-    <h1>What Say Our Clients</h1>
+    <h1>What Our Clients Say</h1>
 
     <!-- Add Write Testimonial Button -->
     <div class="mb-3">
         <a href="{% url 'add_testimonial' %}" class="btn btn-primary">Write a Testimonial</a>
     </div>
 
-       <!-- Testimonial Grid -->
-       <div class="testimonial-grid">
+    <!-- Testimonial Grid -->
+    <div class="testimonial-grid">
         {% for testimonial in testimonials %}
         <div class="testimonial-card">
             <p class="testimonial-content">{{ testimonial.content }}</p>

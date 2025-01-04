@@ -1,6 +1,22 @@
 /******************************* Testimonial Page Styles ************************/
+/* Center the testimonial section on the page */
+/* Center the testimonial section on the page */
+.testimonial-section {
+    margin-top: 150px; /* Align spacing with the rest of the site */
+    text-align: center; /* Center the text content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    border-radius: 8px; /* Optional for consistency */
+    min-height: calc(100vh - 200px); /* Adjust height dynamically based on other elements */
+    box-sizing: border-box; /* Ensure padding is included in height calculation */
+    background: none !important; /* Force removal of all background images */
+    color: #000;
+}
+
 /* Center the grid container */
-.testimonial-grid {
+.testimonial-section .testimonial-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns */
     gap: 20px; /* Space between cards */
@@ -10,36 +26,35 @@
 }
 
 /* General styling for testimonial cards */
-.testimonial-card {
-    background: #fff; /* White background for contrast */
-    border: 1px solid #ddd;
+.testimonial-section .testimonial-card {
+    background: whitesmoke; /* Use the gradient background */
+    border: 1px solid #000000;
     border-radius: 8px;
     padding: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-.testimonial-card:hover {
+.testimonial-section .testimonial-card:hover {
     transform: scale(1.02);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
 
-
 /* Styling for testimonial content */
-.testimonial-content {
+.testimonial-section .testimonial-content {
     font-size: 1em;
-    color: #333; /* Neutral text color */
+    color: black; /* Neutral text color */
     margin-bottom: 10px;
 }
 
 /* Styling for the author */
-.testimonial-author {
+.testimonial-section .testimonial-author {
     font-weight: bold;
     margin-bottom: 5px;
 }
 
 /* Badge for approved testimonials */
-.badge-approved {
+.testimonial-section .badge-approved {
     display: inline-block;
     padding: 5px 10px;
     border-radius: 12px;
@@ -49,75 +64,52 @@
     font-weight: bold;
 }
 
-/* Center the testimonial section on the page */
-.testimonial-section {
-    margin-top: 180px; /* Increase spacing from the navbar */
-    text-align: center; /* Center the text content */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: none; /* Ensure no background image */
-}
-
-.testimonial-section h1 {
-    margin-bottom: 30px; /* Increase space between heading and button */
-    color: #000; /* Set the text color to black */
-}
-
-.mb-3 {
-    margin-bottom: 40px; /* Add spacing below the button */
-}
-
-
 /* Pagination styling */
-.pagination {
+.testimonial-section .pagination {
     display: flex;
     justify-content: center;
     margin-top: 30px; /* Add space above the pagination */
-    justify-content: center;
 }
 
-.pagination a {
+.testimonial-section .pagination a {
     margin: 0 5px;
     padding: 8px 12px;
     background: #f8f8f8;
-    color: #333;
+    color: black;
     border: 1px solid #ddd;
     border-radius: 5px;
     text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
-.pagination a:hover,
-.pagination a.active {
-    background-color: #5a2d82; /* Match site color */
+.testimonial-section .pagination a:hover,
+.testimonial-section .pagination a.active {
+    background-color: black; /* Match site color */
     color: white;
 }
 
 /* Button styling to match the site */
-.btn-primary {
+.testimonial-section .btn-primary {
     background-color: #000; /* Black */
     border-color: #000;
     color: white;
 }
 
-.btn-primary:hover,
-.btn-primary:focus {
+.testimonial-section .btn-primary:hover,
+.testimonial-section .btn-primary:focus {
     background-color: #222; /* Slightly darker black */
     border-color: #222;
 }
 
-
 /******************** Media query for responsiveness ********************/
-
 @media (max-width: 1024px) {
-    .testimonial-grid {
+    .testimonial-section .testimonial-grid {
         grid-template-columns: repeat(2, 1fr); /* 2 columns on medium-sized screens */
     }
 }
 
 @media (max-width: 768px) {
-    .testimonial-grid {
+    .testimonial-section .testimonial-grid {
         grid-template-columns: 1fr; /* Single column on small screens */
     }
     .testimonial-section {
@@ -126,7 +118,105 @@
 }
 
 @media (max-width: 576px) {
-    .testimonial-grid {
-        grid-template-columns: 1fr; /* 1 column on very small screens */
+    .testimonial-section .testimonial-grid {
+        grid-template-columns: 1fr; /* Single column on very small screens */
+    }
+}
+
+/************************************************************************************/
+/******************************* Add Testimonial Page Styles ************************/
+/* Prevent overlap with navbar */
+.add-testimonial-section {
+    margin-top: 150px; /* Push the section below the navbar */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    border-radius: 8px;
+    background: none !important; /* Force removal of all background images */
+}
+
+/* Heading styling */
+.add-testimonial-section h1 {
+    font-size: 2rem; /* Make heading prominent */
+    font-weight: bold;
+    color: #000; /* Black text for better readability */
+    margin-bottom: 20px; /* Add space below heading */
+}
+
+/* Form styling */
+.add-testimonial-section form {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    background: #fff; /* Matching top bar color */
+    color: white; /* White text for contrast */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Label text */
+.add-testimonial-section form label {
+    font-size: 1em;
+    font-weight: bold;
+    color: #000; /* Black text for readability */
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+/* Input and textarea styling */
+.add-testimonial-section form input,
+.add-testimonial-section form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    color: #333;
+}
+
+/* Focus state for input and textarea */
+.add-testimonial-section form input:focus,
+.add-testimonial-section form textarea:focus {
+    outline: none;
+}
+
+/* Placeholder text color */
+.add-testimonial-section form input::placeholder,
+.add-testimonial-section form textarea::placeholder {
+    color: #666; /* Slightly muted text color */
+}
+
+/* Submit button styling */
+.add-testimonial-section form button {
+    background-color: black; /* White button for contrast */
+    color: white; /* Top bar color */
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.add-testimonial-section form button:hover {
+    background-color: #222; /* Slightly darker */
+    color: white;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 576px) {
+    .add-testimonial-section {
+        margin-top: 100px; /* Adjust spacing for smaller screens */
+        padding: 20px; /* Reduce padding */
+    }
+
+    .add-testimonial-section form {
+        max-width: 90%; /* Form adapts to smaller screens */
+        padding: 15px;
     }
 }
