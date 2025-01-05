@@ -124,7 +124,7 @@
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* *****Style for the delete confirmation page ********//* Delete Confirmation Page Styling */
+/* *****Style for the delete confirmation page *********/
 /* Center the delete confirmation box on the page */
 .delete-confirmation {
     margin-top: 0; /* Reset top margin */
@@ -309,6 +309,30 @@
     background-color: #222; /* Slightly darker */
     color: white;
 }
+ /*  form buttons */
+ .form-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Space between buttons */
+    margin-top: 20px; /* Add spacing above buttons */
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    color: white;
+}
+
 
 /* Media query for smaller screens */
 @media (max-width: 576px) {
