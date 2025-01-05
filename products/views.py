@@ -65,6 +65,7 @@ def all_products(request):
 def product_detail(request, product_id):
     """A view to show individual product details, including approved reviews."""
     product = get_object_or_404(Product, pk=product_id)
+    # Get approved reviews, sorted by most recent
     reviews = product.reviews.filter(approved=True).order_by('-created_at')  # Fetch only approved reviews
     review_form = None
 

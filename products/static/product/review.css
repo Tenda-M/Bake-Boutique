@@ -1,3 +1,26 @@
+/*************** Product detail section ****************** */
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.container-fluid {
+    padding-bottom: 50px !important; /* Add space at the bottom */
+}
+
+.page-content {
+    min-height: 100vh !important; /* Ensure the page extends to fit content */
+}
+
+/*************** Review section ****************** */
+.review-section {
+    margin-top: 40px; /* Push the review section down */
+    padding: 20px 15px; /* Add some inner spacing */
+    background-color: #f9f9f9; /* Optional: A subtle background */
+    border-radius: 8px; /* Optional: Slightly rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add some depth */
+}
+
 .review-card {
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -21,7 +44,16 @@
     border: 1px solid #ddd;
     border-radius: 8px;
     background-color: #fff;
+    margin-bottom: 30px; /* Add space between the form and reviews */
 }
+
+@media (min-width: 768px) {
+    .container {
+        display: flex;
+        gap: 20px;
+    }
+}
+
 /**** waiting approval */
 .waiting-approval {
     border: 1px solid #ffc107;
