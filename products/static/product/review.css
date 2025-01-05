@@ -22,3 +22,16 @@
     border-radius: 8px;
     background-color: #fff;
 }
+/**** waiting approval */
+.waiting-approval {
+    border: 1px solid #ffc107;
+    background-color: #fffbe6;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.waiting-approval p.text-warning {
+    color: #856404;
+    font-weight: bold;
+}

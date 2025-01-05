@@ -64,12 +64,19 @@ def all_products(request):
 
 
 def product_detail(request, product_id):
-    """Display product details and handle reviews."""
+    """ A view to show individual product details """
+
     product = get_object_or_404(Product, pk=product_id)
     reviews = product.reviews.filter(approved=True).order_by('-created_at')
+    user_reviews = None
+
+    if request.user.is_authenticated:
+        # Fetch the unapproved reviews of the logged-in user
+        user_reviews = product.reviews.filter(user=request.user, approved=False)
+
     review_form = ReviewForm()
 
-    if request.method == 'POST' and request.user.is_authenticated:
+    if request.method == 'POST':
         review_form = ReviewForm(data=request.POST)
         if review_form.is_valid():
             review = review_form.save(commit=False)
@@ -82,9 +89,11 @@ def product_detail(request, product_id):
     context = {
         'product': product,
         'reviews': reviews,
+        'user_reviews': user_reviews,
         'review_form': review_form,
     }
     return render(request, 'products/product_detail.html', context)
+
 
 @login_required
 def add_product(request):

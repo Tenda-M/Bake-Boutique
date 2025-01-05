@@ -117,6 +117,8 @@
       <!-- Reviews Section -->
       <div class="container mt-5">
         <h3>Reviews ({{ reviews.count }})</h3>
+    
+        <!-- Display approved reviews -->
         {% for review in reviews %}
         <div class="review-card">
             <p><strong>{{ review.user }}</strong> - {{ review.created_at|date:"F j, Y, g:i a" }}</p>
@@ -126,6 +128,18 @@
         <p>No reviews yet. Be the first to write one!</p>
         {% endfor %}
     
+        <!-- Display unapproved reviews for the current user -->
+        {% if user_reviews %}
+            {% for review in user_reviews %}
+            <div class="review-card waiting-approval">
+                <p><strong>{{ review.user }}</strong> - {{ review.created_at|date:"F j, Y, g:i a" }}</p>
+                <p>{{ review.content }}</p>
+                <p class="text-warning">This review is waiting for approval.</p>
+            </div>
+            {% endfor %}
+        {% endif %}
+    
+        <!-- Review form -->
         {% if user.is_authenticated %}
         <h3>Write a Review:</h3>
         <form method="post">
@@ -137,6 +151,7 @@
         <p><a href="{% url 'login' %}">Log in</a> to write a review.</p>
         {% endif %}
     </div>
+    
     
     
 {% endblock %}
