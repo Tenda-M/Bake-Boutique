@@ -111,13 +111,86 @@
 .testimonial-actions {
     margin-top: 10px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center; /* Center the buttons horizontally */
+    gap: 10px; /* Space between the buttons */
 }
 
-.testimonial-actions .btn {
+.testimonial-actions .btn{
     font-size: 0.9rem;
-    padding: 5px 10px;
+    padding: 5px 12px; /* Adjust button padding for better appearance */
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* *****Style for the delete confirmation page ********//* Delete Confirmation Page Styling */
+/* Center the delete confirmation box on the page */
+.delete-confirmation {
+    margin-top: 0; /* Reset top margin */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    position: absolute; /* Position it relative to the viewport */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset to truly center */
+    padding: 40px; /* Add padding for spacing */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #f8f8f8; /* Light background color */
+    color: #000; /* Neutral text color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    max-width: 600px; /* Limit the width of the box */
+    text-align: center; /* Align text */
+    box-sizing: border-box; /* Include padding in the width and height */
+}
+
+/* Styling for the heading */
+.delete-confirmation h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Styling for the paragraph */
+.delete-confirmation p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Styling for the buttons */
+.delete-confirmation .btn {
+    font-size: 1rem;
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.delete-confirmation .btn-danger {
+    background-color: #dc3545;
+    border: none;
+    color: white;
+}
+
+.delete-confirmation .btn-danger:hover {
+    background-color: #c82333;
+}
+
+.delete-confirmation .btn-secondary {
+    background-color: #6c757d;
+    border: none;
+    color: white;
+}
+
+.delete-confirmation .btn-secondary:hover {
+    background-color: #5a6268;
+}
+
 
 
 /*Public testimonial page */
