@@ -62,37 +62,32 @@ def all_products(request):
 
     return render(request, 'products/products.html', context)
 
-
 def product_detail(request, product_id):
-    """ A view to show individual product details """
-
+    """A view to show individual product details, including approved reviews."""
     product = get_object_or_404(Product, pk=product_id)
-    reviews = product.reviews.filter(approved=True).order_by('-created_at')
-    user_reviews = None
+    reviews = product.reviews.filter(approved=True).order_by('-created_at')  # Fetch only approved reviews
+    review_form = None
 
     if request.user.is_authenticated:
-        # Fetch the unapproved reviews of the logged-in user
-        user_reviews = product.reviews.filter(user=request.user, approved=False)
+        review_form = ReviewForm()
 
-    review_form = ReviewForm()
-
-    if request.method == 'POST':
-        review_form = ReviewForm(data=request.POST)
-        if review_form.is_valid():
-            review = review_form.save(commit=False)
-            review.user = request.user
-            review.product = product
-            review.save()
-            messages.success(request, 'Your review has been submitted and is awaiting approval.')
-            return redirect('product_detail', product_id=product.id)
+        if request.method == 'POST':
+            review_form = ReviewForm(data=request.POST)
+            if review_form.is_valid():
+                review = review_form.save(commit=False)
+                review.user = request.user
+                review.product = product
+                review.save()
+                messages.success(request, 'Your review has been submitted and is awaiting approval.')
+                return redirect('product_detail', product_id=product.id)
 
     context = {
         'product': product,
         'reviews': reviews,
-        'user_reviews': user_reviews,
         'review_form': review_form,
     }
     return render(request, 'products/product_detail.html', context)
+
 
 
 @login_required

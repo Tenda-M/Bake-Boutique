@@ -20,12 +20,11 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),  # Admin site
-    path('accounts/', include('allauth.urls')),  # django-allauth URLs
-    path('', include('home.urls')),
-    path('products/', include('products.urls')),
-    path('bag/', include('bag.urls')),
-    path('checkout/', include('checkout.urls')),
-    path('profile/', include('profiles.urls')),
-    path('testimonials/', include('testimonials.urls')),
-
+    path('accounts/', include('allauth.urls')),  # django-allauth handles all account views
+    path('', include('home.urls')),  # Home app URLs
+    path('products/', include('products.urls')),  # Products app URLs
+    path('bag/', include('bag.urls')),  # Bag app URLs
+    path('checkout/', include('checkout.urls')),  # Checkout app URLs
+    path('profile/', include('profiles.urls')),  # Profiles app URLs
+    path('testimonials/', include('testimonials.urls')),  # Testimonials app URLs
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
