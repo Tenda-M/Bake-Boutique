@@ -3,16 +3,24 @@ from .forms import TestimonialForm
 from .models import Testimonial
 from django.core.paginator import Paginator
 from django.contrib.auth.decorators import login_required
+from django.db.models import Q
 
 
 def testimonial_list(request):
-    # Only fetch approved testimonials
-    testimonials_list = Testimonial.objects.filter(approved=True).order_by('-created_at')
-    paginator = Paginator(testimonials_list, 6)  # 6 testimonials per page
-    page_number = request.GET.get('page')  # Get the current page number from the query string
-    testimonials = paginator.get_page(page_number)  # Get the relevant page of testimonials
+    if request.user.is_authenticated:
+        # Show approved testimonials for everyone and unapproved testimonials for the current user
+        testimonials_list = Testimonial.objects.filter(
+            Q(approved=True) | Q(user=request.user)
+        ).order_by('-created_at')
+    else:
+        # Show only approved testimonials for unauthenticated users
+        testimonials_list = Testimonial.objects.filter(approved=True).order_by('-created_at')
 
-    # Pass the paginated testimonials to the template
+    # Pagination
+    paginator = Paginator(testimonials_list, 6)  # 6 testimonials per page
+    page_number = request.GET.get('page')
+    testimonials = paginator.get_page(page_number)
+
     return render(request, 'testimonials/testimonial_list.html', {
         'testimonials': testimonials
     })
