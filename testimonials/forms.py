@@ -12,3 +12,4 @@ class TestimonialForm(forms.ModelForm):
         if len(content) > 100:
             raise forms.ValidationError("Your testimonial exceeds the 100-character limit.")
         return content
+

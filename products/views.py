@@ -7,6 +7,10 @@ from django.db.models.functions import Lower
 from .models import Product, Category
 from .forms import ProductForm
 
+from django.contrib import messages
+from .models import Product, Review
+from .forms import ReviewForm
+
 # Create your views here.
 
 def all_products(request):
@@ -60,14 +64,26 @@ def all_products(request):
 
 
 def product_detail(request, product_id):
-    """ A view to show individual product details """
-
+    """Display product details and handle reviews."""
     product = get_object_or_404(Product, pk=product_id)
+    reviews = product.reviews.filter(approved=True).order_by('-created_at')
+    review_form = ReviewForm()
+
+    if request.method == 'POST' and request.user.is_authenticated:
+        review_form = ReviewForm(data=request.POST)
+        if review_form.is_valid():
+            review = review_form.save(commit=False)
+            review.user = request.user
+            review.product = product
+            review.save()
+            messages.success(request, 'Your review has been submitted and is awaiting approval.')
+            return redirect('product_detail', product_id=product.id)
 
     context = {
         'product': product,
+        'reviews': reviews,
+        'review_form': review_form,
     }
-
     return render(request, 'products/product_detail.html', context)
 
 @login_required
@@ -136,3 +152,20 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+
+################### Review #############
+@login_required
+def add_review(request, product_id):
+    product = get_object_or_404(Product, id=product_id)
+    if request.method == "POST":
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.product = product
+            review.user = request.user
+            review.save()
+            return redirect('product_detail', product_id=product.id)
+    else:
+        form = ReviewForm()
+    return render(request, 'products/add_review.html', {'form': form, 'product': product})

@@ -1,5 +1,8 @@
 from django.db import models
 
+from django.contrib.auth.models import User
+
+
 # Create your models here.
 """     name: Holds the category's name (e.g., "Cakes", "Cupcakes", "Cookies").
     friendly_name: Provides a user-friendly name for display purposes.
@@ -43,3 +46,14 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+################### Review #############
+class Review(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="reviews")
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    content = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    approved = models.BooleanField(default=False)
+
+    def __str__(self):
+        return f"Review by {self.user.username}"
