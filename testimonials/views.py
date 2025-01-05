@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect
 from .forms import TestimonialForm
 from .models import Testimonial
 from django.core.paginator import Paginator
+from django.contrib.auth.decorators import login_required
+
 
 def testimonial_list(request):
     testimonials_list = Testimonial.objects.filter(approved=True)  # Only approved testimonials
@@ -16,7 +18,7 @@ def testimonial_list(request):
         'testimonials': testimonials
     })
 
-
+@login_required
 def add_testimonial(request):
     if request.method == "POST":
         form = TestimonialForm(request.POST)
@@ -26,3 +28,4 @@ def add_testimonial(request):
     else:
         form = TestimonialForm()
     return render(request, "testimonials/testimonial_form.html", {"form": form, "page_title": "Add Testimonial"})
+

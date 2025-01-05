@@ -9,27 +9,24 @@
     <!-- Header Section -->
     <h1>What Our Clients Say</h1>
 
-    <!-- Add Write Testimonial Button -->
+    <!-- Add Write Testimonial Button (only for signed-in users) -->
+    {% if user.is_authenticated %}
     <div class="mb-3">
         <a href="{% url 'add_testimonial' %}" class="btn btn-primary">Write a Testimonial</a>
     </div>
+    {% else %}
+    <p class="log-in-message">Log in to write a testimonial.</p>
+    {% endif %}
 
     <!-- Testimonial Grid -->
     <div class="testimonial-grid">
         {% for testimonial in testimonials %}
         <div class="testimonial-card">
-            <!-- Testimonial Content -->
-            <p class="testimonial-content">{{ testimonial.content }}</p>
-            
-            <!-- Author Name -->
+            <p class="testimonial-content">{{ testimonial.content|truncatechars:100 }}</p>
             <div class="testimonial-author">{{ testimonial.name }}</div>
-
-            <!-- Timestamp -->
-            <div class="testimonial-timestamp text-muted">
-                {{ testimonial.created_at|date:"F j, Y, g:i a" }}
+            <div class="testimonial-date">
+                <small>Submitted on: {{ testimonial.created_at|date:"F j, Y, g:i a" }}</small>
             </div>
-            
-            <!-- Approved Badge -->
             <span class="badge-approved">Approved</span>
         </div>
         {% empty %}
