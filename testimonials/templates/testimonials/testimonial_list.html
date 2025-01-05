@@ -18,8 +18,18 @@
     <div class="testimonial-grid">
         {% for testimonial in testimonials %}
         <div class="testimonial-card">
+            <!-- Testimonial Content -->
             <p class="testimonial-content">{{ testimonial.content }}</p>
+            
+            <!-- Author Name -->
             <div class="testimonial-author">{{ testimonial.name }}</div>
+
+            <!-- Timestamp -->
+            <div class="testimonial-timestamp text-muted">
+                {{ testimonial.created_at|date:"F j, Y, g:i a" }}
+            </div>
+            
+            <!-- Approved Badge -->
             <span class="badge-approved">Approved</span>
         </div>
         {% empty %}

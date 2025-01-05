@@ -8,6 +8,8 @@ def testimonial_list(request):
     paginator = Paginator(testimonials_list, 6)  # 6 testimonials per page
     page_number = request.GET.get('page')  # Get the current page number from the query string
     testimonials = paginator.get_page(page_number)  # Get the relevant page of testimonials
+    testimonials = Testimonial.objects.filter(approved=True).order_by('-created_at')
+
 
     # Pass the paginated testimonials to the template
     return render(request, 'testimonials/testimonial_list.html', {
