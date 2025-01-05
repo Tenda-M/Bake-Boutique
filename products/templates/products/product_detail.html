@@ -66,6 +66,11 @@
             <div class="review-card">
                 <p><strong>{{ review.user }}</strong> - {{ review.created_at|date:"F j, Y, g:i a" }}</p>
                 <p>{{ review.content }}</p>
+                <!-- Show Edit and Delete buttons only for the review owner -->
+                {% if user == review.user %}
+                <a href="{% url 'edit_review' review.id %}" class="btn btn-sm btn-primary">Edit</a>
+                <a href="{% url 'delete_review' review.id %}" class="btn btn-sm btn-danger">Delete</a>
+                {% endif %}
             </div>
         {% empty %}
             <p>No reviews yet. Be the first to write one!</p>

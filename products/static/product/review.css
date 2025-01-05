@@ -47,6 +47,12 @@ body {
     margin-bottom: 30px; /* Add space between the form and reviews */
 }
 
+/****edit and delete buttons */
+.btn-sm {
+    padding: 5px 10px;
+    font-size: 0.875rem;
+}
+
 @media (min-width: 768px) {
     .container {
         display: flex;
