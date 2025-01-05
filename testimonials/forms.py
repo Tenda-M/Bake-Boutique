@@ -5,7 +5,7 @@ from .models import Testimonial
 class TestimonialForm(forms.ModelForm):
     class Meta:
         model = Testimonial
-        fields = ['name', 'content']
+        fields = ['content']
 
     def clean_content(self):
         content = self.cleaned_data.get('content')
