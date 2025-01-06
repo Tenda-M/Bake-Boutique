@@ -1,13 +1,14 @@
 /******************************* top product detail Page Styles ************************/
-.col-12 {
-    margin-top: 150px; /* Align spacing with the rest of the site */
+.form-row {
+    margin-top: 5px; /* Align spacing with the rest of the site */
 
 }
+
 
 /******************************* bottom product detail Page Styles ************************/
 
 .review-section {
-    margin: 20px 0;
+   /* margin: 20px 0;*/
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 8px;
