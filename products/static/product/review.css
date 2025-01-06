@@ -1,17 +1,73 @@
-/******************************* Review Page Styles ************************/
+/******************************* top product detail Page Styles ************************/
+.col-12 {
+    margin-top: 150px; /* Align spacing with the rest of the site */
 
-/*.review-section {
-    bottom: 0; /* Places the div at the bottom of the page *
-    left: 0; /* Ensures it spans from the left edge *
-    width: 100%; /* Makes the div span the full width of the page *
-    padding: 20px; /* Adds some padding for spacing *
-    border-top: 1px solid #ddd; /* Optional: adds a border at the top 
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for depth 
-}*/
+}
+
+/******************************* bottom product detail Page Styles ************************/
+
+.review-section {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.review-container {
+    display: flex;
+    flex-direction: column; /* Ensure vertical alignment */
+    gap: 20px; /* Add spacing between sections */
+}
+
+.review-form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pending-reviews, .approved-reviews {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.review-card {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.review-card.waiting-approval {
+    border: 1px solid #ffc107;
+    background-color: #fffbe6;
+}
+
+.review-card p {
+    margin: 5px 0;
+}
+
+.review-card .btn {
+    margin-right: 10px;
+}
+
+
+.review-list {
+    flex: 2; /* Allows the list to take more space */
+    background-color: #ffffff; /* Optional: Light background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 
 /******************************* Edit Review Page Styles ************************/
 .edit-card{
-    margin-top: 450px; /* Align spacing with the rest of the site */
+    margin-top: 300px; /* Align spacing with the rest of the site */
     display: flex;
     flex-direction: column;
     justify-content: center; /* Center vertically */
@@ -33,7 +89,7 @@
 
 /******************************* Delete Review Page Styles ************************/
 .delete-card{
-    margin-top: 350px; /* Align spacing with the rest of the site */
+    margin-top: 200px; /* Align spacing with the rest of the site */
     display: flex;
     flex-direction: column;
     justify-content: center; /* Center vertically */

@@ -5,6 +5,7 @@
 {% endblock %}
 
 {% block content %}
+<!-- top procuct detail Section -->
 <div class="overlay"></div>
 <div class="container-fluid">
     <div class="row">
@@ -47,8 +48,9 @@
 <div class="review-section">
     <h3>Reviews ({{ reviews.count }})</h3>
 
-    <!-- Review Form -->
-    {% if user.is_authenticated %}
+    <div class="review-container">
+        <!-- Review Form -->
+        {% if user.is_authenticated %}
         <div class="review-form">
             <h3>Write a Review:</h3>
             <form method="post">
@@ -57,39 +59,39 @@
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
         </div>
-    {% endif %}
+        {% endif %}
 
-    <!-- Approved Reviews -->
-    <div class="review-list">
-        {% for review in reviews %}
+        <!-- Pending Reviews -->
+        {% if user_reviews %}
+        <div class="pending-reviews">
+            <h4>Your Pending Reviews</h4>
+            {% for review in user_reviews %}
+            <div class="review-card waiting-approval">
+                <p><strong>{{ review.user }}</strong> - {{ review.created_at|date:"F j, Y, g:i a" }}</p>
+                <p>{{ review.content }}</p>
+                <p class="text-warning">This review is waiting for approval.</p>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        <!-- Approved Reviews -->
+        <div class="approved-reviews">
+            <h4>Approved Reviews</h4>
+            {% for review in reviews %}
             <div class="review-card">
                 <p><strong>{{ review.user }}</strong> - {{ review.created_at|date:"F j, Y, g:i a" }}</p>
                 <p>{{ review.content }}</p>
-                <!-- Show Edit and Delete buttons only for the review owner -->
                 {% if user == review.user %}
                 <a href="{% url 'edit_review' review.id %}" class="btn btn-sm btn-primary">Edit</a>
                 <a href="{% url 'delete_review' review.id %}" class="btn btn-sm btn-danger">Delete</a>
                 {% endif %}
             </div>
-        {% empty %}
+            {% empty %}
             <p>No reviews yet. Be the first to write one!</p>
-        {% endfor %}
+            {% endfor %}
+        </div>
     </div>
-   
-     <!-- Unapproved Reviews for Current User -->
-     {% if user_reviews %}
-     <div class="unapproved-reviews">
-         <h4>Your Pending Reviews</h4>
-         {% for review in user_reviews %}
-         <div class="review-card waiting-approval">
-             <p><strong>{{ review.user }}</strong> - {{ review.created_at|date:"F j, Y, g:i a" }}</p>
-             <p>{{ review.content }}</p>
-             <p class="text-warning">This review is waiting for approval.</p>
-         </div>
-         {% endfor %}
-     </div>
- {% endif %}
-
 </div>
 
 {% endblock %}
