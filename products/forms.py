@@ -25,4 +25,13 @@ class ProductForm(forms.ModelForm):
 class ReviewForm(forms.ModelForm):
     class Meta:
         model = Review
-        fields = ['content']  # Include only the fields required
+        fields = ['content']
+        widgets = {
+            'content': forms.Textarea(attrs={'maxlength': 100}),
+        }
+    
+    def clean_content(self):
+        content = self.cleaned_data.get('content')
+        if len(content) > 100:
+            raise forms.ValidationError('Review cannot exceed 100 characters.')
+        return content

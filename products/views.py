@@ -203,7 +203,11 @@ def add_review(request, product_id):
             review.product = product
             review.user = request.user
             review.save()
+            messages.success(request, 'Your review has been submitted and is awaiting approval.')
             return redirect('product_detail', product_id=product.id)
+        else:
+            for error in form.errors.values():
+                messages.error(request, error)
     else:
         form = ReviewForm()
     return render(request, 'products/add_review.html', {'form': form, 'product': product})
@@ -216,15 +220,20 @@ def edit_review(request, review_id):
         form = ReviewForm(request.POST, instance=review)
         if form.is_valid():
             form.save()
+            messages.success(request, 'Your review has been updated successfully.')
             return redirect('product_detail', product_id=review.product.id)
+        else:
+            for error in form.errors.values():
+                messages.error(request, error)
     else:
         form = ReviewForm(instance=review)
 
     context = {
         'form': form,
-        'product_id': review.product.id,  # Pass product_id to the template
+        'product_id': review.product.id,
     }
     return render(request, 'products/edit_review.html', context)
+
 
 
 @login_required
