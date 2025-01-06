@@ -178,25 +178,20 @@ def add_review(request, product_id):
 
 @login_required
 def edit_review(request, review_id):
-    """Allow the user to edit their review"""
     review = get_object_or_404(Review, id=review_id, user=request.user)
-
     if request.method == "POST":
         form = ReviewForm(request.POST, instance=review)
         if form.is_valid():
             form.save()
-            messages.success(request, "Your review has been updated successfully.")
-            return redirect("product_detail", product_id=review.product.id)
-        else:
-            messages.error(request, "Failed to update review. Please ensure the form is valid.")
+            return redirect('product_detail', product_id=review.product.id)
     else:
         form = ReviewForm(instance=review)
 
     context = {
-        "form": form,
-        "review": review,
+        'form': form,
+        'product_id': review.product.id,  # Pass product_id to the template
     }
-    return render(request, "products/edit_review.html", context)
+    return render(request, 'products/edit_review.html', context)
 
 
 @login_required

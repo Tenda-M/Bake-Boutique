@@ -1,75 +1,60 @@
-/*************** Product detail section ****************** */
-body {
-    margin: 0 !important;
-    padding: 0 !important;
+/******************************* Review Page Styles ************************/
+.edit-card{
+    margin-top: 450px; /* Align spacing with the rest of the site */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    position: absolute; /* Position it relative to the viewport */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset to truly center */
+    padding: 40px; /* Add padding for spacing */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #f8f8f8; /* Light background color */
+    color: #000; /* Neutral text color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    max-width: 600px; /* Limit the width of the box */
+    text-align: center; /* Align text */
+    box-sizing: border-box; /* Include padding in the width and height */
+    box-shadow: 0 4px 6px rgba(19, 18, 18, 0.9);
 }
 
-.container-fluid {
-    padding-bottom: 50px !important; /* Add space at the bottom */
+.delete-card{
+    margin-top: 350px; /* Align spacing with the rest of the site */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    position: absolute; /* Position it relative to the viewport */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset to truly center */
+    padding: 40px; /* Add padding for spacing */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #f8f8f8; /* Light background color */
+    color: #000; /* Neutral text color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    max-width: 600px; /* Limit the width of the box */
+    text-align: center; /* Align text */
+    box-sizing: border-box; /* Include padding in the width and height */
+    box-shadow: 0 4px 6px rgba(19, 18, 18, 0.9);
 }
 
-.page-content {
-    min-height: 100vh !important; /* Ensure the page extends to fit content */
-}
-
-/*************** Review section ****************** */
-.review-section {
-    margin-top: 40px; /* Push the review section down */
-    padding: 20px 15px; /* Add some inner spacing */
-    background-color: #f9f9f9; /* Optional: A subtle background */
-    border-radius: 8px; /* Optional: Slightly rounded corners */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add some depth */
-}
-
-.review-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 15px;
-    margin-bottom: 20px;
-    background-color: #f9f9f9;
-}
-
-.review-card p {
-    margin: 0 0 10px;
-    color: #333;
-}
-
-.review-card strong {
+.btn btn{
+    font-size: 1rem;
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 4px;
+    text-transform: uppercase;
     font-weight: bold;
+    transition: all 0.3s ease;
+
 }
 
-.review-form {
-    margin-top: 20px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #fff;
-    margin-bottom: 30px; /* Add space between the form and reviews */
+.delete-card button,
+.edit-card button {
+    margin: 0 20px; /* Adds space between buttons horizontally */
 }
+/******************** Media query for responsiveness ********************/
 
-/****edit and delete buttons */
-.btn-sm {
-    padding: 5px 10px;
-    font-size: 0.875rem;
-}
-
-@media (min-width: 768px) {
-    .container {
-        display: flex;
-        gap: 20px;
-    }
-}
-
-/**** waiting approval */
-.waiting-approval {
-    border: 1px solid #ffc107;
-    background-color: #fffbe6;
-    padding: 15px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.waiting-approval p.text-warning {
-    color: #856404;
-    font-weight: bold;
-}
