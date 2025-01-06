@@ -2,7 +2,6 @@
 {% load static %}
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'product/review.css' %}">
-<link rel="stylesheet" href="{% static 'base.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -76,8 +75,23 @@
             <p>No reviews yet. Be the first to write one!</p>
         {% endfor %}
     </div>
+   
+     <!-- Unapproved Reviews for Current User -->
+     {% if user_reviews %}
+     <div class="unapproved-reviews">
+         <h4>Your Pending Reviews</h4>
+         {% for review in user_reviews %}
+         <div class="review-card waiting-approval">
+             <p><strong>{{ review.user }}</strong> - {{ review.created_at|date:"F j, Y, g:i a" }}</p>
+             <p>{{ review.content }}</p>
+             <p class="text-warning">This review is waiting for approval.</p>
+         </div>
+         {% endfor %}
+     </div>
+ {% endif %}
+
 </div>
 
-
-
 {% endblock %}
+
+       

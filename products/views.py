@@ -65,8 +65,15 @@ def all_products(request):
 def product_detail(request, product_id):
     """A view to show individual product details, including approved reviews."""
     product = get_object_or_404(Product, pk=product_id)
+    
     # Get approved reviews, sorted by most recent
     reviews = product.reviews.filter(approved=True).order_by('-created_at')  # Fetch only approved reviews
+
+    # Get unapproved reviews for the logged-in user (if authenticated)
+    user_reviews = []
+    if request.user.is_authenticated:
+        user_reviews = product.reviews.filter(user=request.user, approved=False).order_by('-created_at')
+
     review_form = None
 
     if request.user.is_authenticated:
@@ -85,10 +92,10 @@ def product_detail(request, product_id):
     context = {
         'product': product,
         'reviews': reviews,
+        'user_reviews': user_reviews,  # Pass unapproved reviews to the template
         'review_form': review_form,
     }
     return render(request, 'products/product_detail.html', context)
-
 
 
 @login_required

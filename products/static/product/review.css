@@ -1,4 +1,15 @@
 /******************************* Review Page Styles ************************/
+
+/*.review-section {
+    bottom: 0; /* Places the div at the bottom of the page *
+    left: 0; /* Ensures it spans from the left edge *
+    width: 100%; /* Makes the div span the full width of the page *
+    padding: 20px; /* Adds some padding for spacing *
+    border-top: 1px solid #ddd; /* Optional: adds a border at the top 
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for depth 
+}*/
+
+/******************************* Edit Review Page Styles ************************/
 .edit-card{
     margin-top: 450px; /* Align spacing with the rest of the site */
     display: flex;
@@ -20,6 +31,7 @@
     box-shadow: 0 4px 6px rgba(19, 18, 18, 0.9);
 }
 
+/******************************* Delete Review Page Styles ************************/
 .delete-card{
     margin-top: 350px; /* Align spacing with the rest of the site */
     display: flex;
@@ -56,5 +68,20 @@
 .edit-card button {
     margin: 0 20px; /* Adds space between buttons horizontally */
 }
+
+/**** waiting approval **********/
+.review-card.waiting-approval {
+    border: 1px solid #ffc107;
+    background-color: #fffbe6;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.review-card.waiting-approval p.text-warning {
+    color: #856404;
+    font-weight: bold;
+}
+
 /******************** Media query for responsiveness ********************/
 
