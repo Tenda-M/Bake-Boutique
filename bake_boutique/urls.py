@@ -27,4 +27,6 @@ urlpatterns = [
     path('checkout/', include('checkout.urls')),  # Checkout app URLs
     path('profile/', include('profiles.urls')),  # Profiles app URLs
     path('testimonials/', include('testimonials.urls')),  # Testimonials app URLs
+    path('wishlist/', include('wishlist.urls')), # wishlist
+    
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
