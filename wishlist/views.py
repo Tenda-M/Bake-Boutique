@@ -6,10 +6,15 @@ from products.models import Product
 # Create your views here.
 @login_required
 def add_to_wishlist(request, product_id):
+    # Get the product from the database
     product = Product.objects.get(id=product_id)
+
+    # Check if the product is already in the user's wishlist
     if not Wishlist.objects.filter(user=request.user, product=product).exists():
         Wishlist.objects.create(user=request.user, product=product)
-    return redirect('wishlist:view_wishlist')
+
+    # Redirect to the product detail page or wishlist page
+    return redirect('product:detail', product_id=product.id)  # Adjust the URL as needed
 
 @login_required
 def remove_from_wishlist(request, product_id):

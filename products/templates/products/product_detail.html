@@ -108,10 +108,17 @@
         </div>
     </div>
 
+    <!-- WHISH LIST SECTION-->
+    {% if user.is_authenticated %}
+    <!-- "Add to Wishlist" Button -->
+    <a href="{% url 'wishlist:add_to_wishlist' product.id %}" class="btn btn-primary">
+        Add to Wishlist
+    </a>
+{% else %}
+    <p>You must be logged in to add to your wishlist.</p>
+{% endif %}
 
 
-
-<!-- ####################################################################################################################### -->
 <!-- Reviews Section -->
 <div class="review-section">
     <h3>Reviews ({{ reviews.count }})</h3>
