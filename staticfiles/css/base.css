@@ -266,6 +266,19 @@ input[name='q']::placeholder {
     border-color: #dc3545;
     border-radius: 0;
 }
+/***** Wishlist Icon Styling ****/
+body .list-inline-item {
+    color: black;  /* Color set to black */
+}
+
+/* Remove underline on hover for wishlist icon */
+body .list-inline-item-icon a {
+    text-decoration: none;
+}
+
+body .list-inline-item a:hover {
+    text-decoration: none;  /* Ensure there's no underline on hover */
+}
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
