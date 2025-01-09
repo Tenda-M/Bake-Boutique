@@ -35,8 +35,9 @@
                     <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
                     {% if product.category %}
                     <p class="small mt-1 mb-0">
-                        <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
-                            <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                        
+                        <a class="text-muted" href="{% url 'products:products' %}?category={{ product.category.name }}">
+                        <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
                         </a>
                     </p>
                     {% endif %}
@@ -91,7 +92,8 @@
                             </div>
 
                             <div class="col{% if s %}-12 mt-2{% endif %}">
-                                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
+
+                                <a href="{% url 'products:products' %}" class="btn btn-outline-black rounded-0 mt-5">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
@@ -109,18 +111,26 @@
     </div>
 
     <!-- WHISH LIST SECTION-->
+
     {% if user.is_authenticated %}
     <!-- "Add to Wishlist" Button -->
-    <a href="{% url 'wishlist:add_to_wishlist' product.id %}" class="btn btn-primary">
+    <button id="add-to-wishlist-btn" class="btn btn-primary" data-product-id="{{ product.id }}">
         Add to Wishlist
-    </a>
-{% else %}
+    </button>
+    {% else %}
     <p>You must be logged in to add to your wishlist.</p>
-{% endif %}
+    {% endif %}
 
+    <!--{% csrf_token %}
 
-<!-- Reviews Section -->
-<div class="review-section">
+    <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}"> -->
+
+    <!-- Messages will appear here -->
+    <div id="notification" style="display:none;"></div>
+
+    <!------------------------------ Reviews Section ------------------------------------------>
+    
+    <div class="review-section">
     <h3>Reviews ({{ reviews.count }})</h3>
 
     <div class="review-container">
@@ -158,8 +168,8 @@
                 <p><strong>{{ review.user }}</strong> - {{ review.created_at|date:"F j, Y, g:i a" }}</p>
                 <p>{{ review.content }}</p>
                 {% if user == review.user %}
-                <a href="{% url 'edit_review' review.id %}" class="btn btn-sm btn-primary">Edit</a>
-                <a href="{% url 'delete_review' review.id %}" class="btn btn-sm btn-danger">Delete</a>
+                <a href="{% url 'products:edit_review' review.id %}" class="btn btn-sm btn-primary">Edit</a>
+                <a href="{% url 'products:delete_review' review.id %}" class="btn btn-sm btn-danger">Delete</a>
                 {% endif %}
             </div>
             {% empty %}
@@ -167,9 +177,51 @@
             {% endfor %}
         </div>
     </div>
-</div>
+    </div>
+    <!-------------------------------------------------------->
 
 {% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const addToWishlistBtn = document.getElementById('add-to-wishlist-btn');
+    
+    if (addToWishlistBtn) {
+        addToWishlistBtn.addEventListener('click', function() {
+            const productId = this.getAttribute('data-product-id');
+
+            // Make the AJAX request
+            fetch(`/wishlist/add/${productId}/`, {
+                method: 'GET',
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest',  // Tell Django this is an AJAX request
+                },
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);  // Log the response
+
+                // Display notification message
+                const notificationDiv = document.getElementById('notification');
+                notificationDiv.innerText = data.message;
+                notificationDiv.style.display = 'block';  // Show the notification
+
+                if (data.success) {
+                    // Optionally, you can disable the button or change its text
+                    addToWishlistBtn.disabled = true;
+                    addToWishlistBtn.innerText = 'Added to Wishlist';
+                }
+            })
+            .catch(error => console.log('Error:', error));
+        });
+    } else {
+        console.error("Add to Wishlist button not found");
+    }
+});
+</script>
+{% endblock %}
+
 
 
 {% block postloadjs %}

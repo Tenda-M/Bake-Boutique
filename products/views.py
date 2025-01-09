@@ -60,7 +60,8 @@ def all_products(request):
         'current_sorting': current_sorting,
     }
 
-    return render(request, 'products/products.html', context)
+    #return render(request, 'products/products.html', context)
+    return render(request, 'products/products.html', {'products': products})
 
 def product_detail(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
@@ -79,7 +80,8 @@ def product_detail(request, product_id):
             review.product = product
             review.save()
             messages.success(request, 'Your review has been submitted and is awaiting approval.')
-            return redirect('product_detail', product_id=product.id)
+            return redirect('products:product_detail', product_id=product.id)
+
 
     context = {
         'product': product,
@@ -221,7 +223,7 @@ def edit_review(request, review_id):
         if form.is_valid():
             form.save()
             messages.success(request, 'Your review has been updated successfully.')
-            return redirect('product_detail', product_id=review.product.id)
+            return redirect('products:product_detail', product_id=review.product.id)
         else:
             for error in form.errors.values():
                 messages.error(request, error)
@@ -245,7 +247,7 @@ def delete_review(request, review_id):
         product_id = review.product.id
         review.delete()
         messages.success(request, "Your review has been deleted successfully.")
-        return redirect("product_detail", product_id=product_id)
+        return redirect("products:product_detail", product_id=product_id)
 
     context = {
         "review": review,

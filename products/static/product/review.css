@@ -9,6 +9,7 @@
 
 .review-section {
    /* margin: 20px 0;*/
+    position: relative; /* Ensure it's within the normal flow of the page */
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 8px;
@@ -73,7 +74,7 @@
     flex-direction: column;
     justify-content: center; /* Center vertically */
     align-items: center; /* Center horizontally */
-    position: absolute; /* Position it relative to the viewport */
+    /* position: absolute; Position it relative to the viewport */
     top: 50%; /* Center vertically */
     left: 50%; /* Center horizontally */
     transform: translate(-50%, -50%); /* Offset to truly center */
@@ -95,7 +96,7 @@
     flex-direction: column;
     justify-content: center; /* Center vertically */
     align-items: center; /* Center horizontally */
-    position: absolute; /* Position it relative to the viewport */
+    /* position: absolute; /* Position it relative to the viewport */
     top: 50%; /* Center vertically */
     left: 50%; /* Center horizontally */
     transform: translate(-50%, -50%); /* Offset to truly center */
