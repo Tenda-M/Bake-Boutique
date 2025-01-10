@@ -1,3 +1,14 @@
-.wishlist-card p-4 shadow{
-    margin-top: 200px; /* Align spacing with the rest of the site */
+.wishlist-card{
+    margin: 200px 30px 5px; /* spacing with the rest of the site */
+    padding: 10px; /* Add padding for spacing */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #f8f8f8; /* Light background color */
+    color: #000; /* Neutral text color */
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    max-width: 600px; /* Limit the width of the box */
+    
+}
+
+.wishlist-card wishlist-list{
+    color: #000 !important; /* Neutral text color */
 }

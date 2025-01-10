@@ -6,14 +6,17 @@
 
 
 {% block content %}
-    <div class="wishlist-card p-4 shadow">
+    <div class="wishlist-card ">
         <h1>Your Wishlist</h1>
         <ul>
             {% for item in wishlist_items %}
-                <li>
+                <li class="wishlist-list">
                     
                     <a href="{% url 'products:product_detail' item.product.id %}">{{ item.product.name }}</a>
                     <a href="{% url 'wishlist:remove_from_wishlist' item.product.id %}">Remove</a>
+                    <!--<a href="{% url 'add_to_bag' item.product.id %}">Add to bag</a> -->
+
+
                 </li>
             {% empty %}
                 <li>Your wishlist is empty.</li>
