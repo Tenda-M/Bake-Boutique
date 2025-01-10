@@ -11,12 +11,21 @@
         <ul>
             {% for item in wishlist_items %}
                 <li class="wishlist-list">
-                    
                     <a href="{% url 'products:product_detail' item.product.id %}">{{ item.product.name }}</a>
                     <a href="{% url 'wishlist:remove_from_wishlist' item.product.id %}">Remove</a>
-                    <!--<a href="{% url 'add_to_bag' item.product.id %}">Add to bag</a> -->
 
-
+                    <!-- Check if product id exists before attempting to create the "Add to bag" URL -->
+                    {% if item.product.id %}
+                    <form method="POST" action="{% url 'bag:add_to_bag' item.product.id %}">
+                        {% csrf_token %}
+                        <input type="hidden" name="quantity" value="1"> <!-- Default quantity if not provided -->
+                        <input type="hidden" name="redirect_url" value="{{ request.path }}"> <!-- Redirect back to the wishlist page -->
+                        <button type="submit">Add to bag</button>
+                    </form>
+                    
+                    {% else %}
+                        <p>Product ID missing</p>
+                    {% endif %}
                 </li>
             {% empty %}
                 <li>Your wishlist is empty.</li>
