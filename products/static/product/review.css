@@ -3,6 +3,31 @@
     margin-top: 5px; /* Align spacing with the rest of the site */
 
 }
+/**********************************Keep shopping, Add to bag and Wishlist buttons  *****************************************/
+/*.button-container {
+    display: flex;
+    justify-content: space-between;  /* Align buttons evenly with equal space between them 
+    gap: 20px; /* Space between the buttons 
+    align-items: center; /* Vertically center the buttons 
+    margin-top: 20px; /* Optional: space above the container 
+}
+
+.keep-shopping-btn {
+    flex: 1; /* Allow this button to take the available space 
+}
+
+.add-to-wishlist-btn {
+    flex: 1; /* Allow this button to take the available space 
+}
+
+.add-to-bag-btn {
+    flex: 1; /* Allow this button to take the available space 
+}
+
+/* Additional margin for better spacing between the buttons *
+.button-container .btn {
+    margin: 0 10px;
+}*/
 
 
 /******************************* bottom product detail Page Styles ************************/
@@ -142,4 +167,3 @@
 }
 
 /******************** Media query for responsiveness ********************/
-
