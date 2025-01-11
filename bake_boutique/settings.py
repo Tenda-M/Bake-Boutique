@@ -63,6 +63,7 @@ INSTALLED_APPS = [
     'allauth.account',       # Handles account management
     'allauth.socialaccount', 
     'home',
+    'bake_boutique',
     'products',
     'bag',
     'checkout',
