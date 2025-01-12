@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'about/about_us.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="about-us-container">
+    <div class="about-us-content ">
+        <h1 class="text-center">About Us</h1>
+        <p class="text-center mt-4">
+            Welcome to Bake Boutique! We are passionate about baking the finest cakes, cupcakes, cookies, and pastries.
+            Our mission is to deliver exceptional quality and unforgettable flavors, making every celebration sweeter.
+        </p>
+
+        <div class="row ">
+            <div class="ccol-md-12">
+                <h2>Our Story</h2>
+                <p>
+                    Bake Boutique began as a small family-owned bakery and has grown into a beloved brand known
+                    for its commitment to quality, creativity, and customer satisfaction.
+                </p>
+                <h2>Our Promise</h2>
+                <p>
+                    We promise to use only the finest ingredients and bake every product with love and care.
+                    Your happiness is our greatest reward!
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
