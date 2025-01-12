@@ -13,7 +13,8 @@
                 <form method="post">
                     {% csrf_token %}
                     <div class="form-group">
-                        {{ form.as_p }}
+                        <!-- Manually render the content field without label -->
+                        <textarea name="content" class="form-control" rows="4">{{ form.content.value }}</textarea>
                     </div>
                     <div class="d-flex justify-content-between mt-4">
                         <button type="submit" class="btn btn-black px-4">Update</button>
@@ -35,4 +36,3 @@
         {% endfor %}
     </div>
 {% endif %}
-

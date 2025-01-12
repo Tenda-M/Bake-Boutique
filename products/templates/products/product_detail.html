@@ -4,6 +4,17 @@
 <link rel="stylesheet" href="{% static 'product/review.css' %}">
 {% endblock %}
 
+{% if messages %}
+    <div class="alert-container">
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}
+
+
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -101,22 +112,26 @@
                                         <span class="text-uppercase">Keep Shopping</span>
                                     </a>
                                     <div class="button-container">
-                                        <!-- "Add to Wishlist" Button -->
-                                        {% if user.is_authenticated %}
-                                            <button id="add-to-wishlist-btn" class="btn btn-outline-black rounded-0 mt-5" data-product-id="{{ product.id }}">
-                                                Add to Wishlist
-                                            </button>
+                                    <!-- "Add to Wishlist" Button -->
+                                    <!-- Add to Wishlist Button (within the form for consistent styling) -->
+                                    {% if user.is_authenticated %}
+                                        <button type="button" id="add-to-wishlist-btn" class="btn btn-outline-black rounded-0 mt-5" data-product-id="{{ product.id }}">
+                                            Add to Wishlist
+                                        </button>
                                         {% else %}
                                             <p>You must be logged in to add to your wishlist.</p>
-                                        {% endif %}
+                                    {% endif %} 
                                     <!-- "Add to Bag" Button -->
                                     <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
                                 </div>
+                                
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             {% endwith %}
+                            
                         </div>
                     </form>
+                    
                 </div>
             </div>
         </div>
@@ -124,8 +139,11 @@
 
     <!-- WHISH LIST SECTION-->
 
+
+
     <!-- Messages will appear here -->
     <div id="notification" style="display:none;"></div>
+
 
     <!------------------------------ Reviews Section ------------------------------------------>
     
@@ -185,6 +203,13 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const addToWishlistBtn = document.getElementById('add-to-wishlist-btn');
+
+     // Debugging: Check if the button is found
+     //if (addToWishlistBtn) {
+        //console.log("Wishlist button found!");
+    //} else {
+        //console.error("Add to Wishlist button not found");
+    //}
     
     if (addToWishlistBtn) {
         addToWishlistBtn.addEventListener('click', function() {
@@ -203,7 +228,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 // Display notification message
                 const notificationDiv = document.getElementById('notification');
-                notificationDiv.innerText = data.message;
+                notificationDiv.innerText = data.message;  // Set the notification text
                 notificationDiv.style.display = 'block';  // Show the notification
 
                 if (data.success) {
@@ -218,6 +243,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error("Add to Wishlist button not found");
     }
 });
+
 </script>
 {% endblock %}
 
@@ -231,3 +257,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
        
+

@@ -29,6 +29,13 @@
     margin: 0 10px;
 }*/
 
+#notification {
+    background-color: #dff0d8;
+    padding: 10px;
+    margin-top: 10px;
+    display: none; /* Initially hidden */
+    color: #3c763d;
+}
 
 /******************************* bottom product detail Page Styles ************************/
 
@@ -94,16 +101,14 @@
 
 /******************************* Edit Review Page Styles ************************/
 .edit-card{
-    margin-top: 300px; /* Align spacing with the rest of the site */
+    margin-top: 400px; /* Align spacing with the rest of the site */
     display: flex;
     flex-direction: column;
     justify-content: center; /* Center vertically */
-    align-items: center; /* Center horizontally */
-    /* position: absolute; Position it relative to the viewport */
     top: 50%; /* Center vertically */
     left: 50%; /* Center horizontally */
     transform: translate(-50%, -50%); /* Offset to truly center */
-    padding: 40px; /* Add padding for spacing */
+    padding: 10px; /* Add padding for spacing */
     border-radius: 8px; /* Rounded corners */
     background-color: #f8f8f8; /* Light background color */
     color: #000; /* Neutral text color */
@@ -116,7 +121,7 @@
 
 /******************************* Delete Review Page Styles ************************/
 .delete-card{
-    margin-top: 200px; /* Align spacing with the rest of the site */
+    margin-top: 300px; /* Align spacing with the rest of the site */
     display: flex;
     flex-direction: column;
     justify-content: center; /* Center vertically */

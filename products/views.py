@@ -253,3 +253,4 @@ def delete_review(request, review_id):
         "review": review,
     }
     return render(request, "products/delete_review.html", context)
+
