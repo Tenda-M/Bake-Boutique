@@ -30,6 +30,7 @@ urlpatterns = [
     path('testimonials/', include('testimonials.urls')),  # Testimonials app URLs
     path('wishlist/', include('wishlist.urls')), # wishlist
     path('about/', include('about.urls')),
+    path('contact/', include('contact.urls', namespace='contact')),
     
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

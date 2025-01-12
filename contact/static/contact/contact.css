@@ -1,0 +1,44 @@
+html, body {
+    height: 100%; /* Make sure the body and html take full viewport height */
+    margin: 0; /* Remove default margin */
+}
+
+.contact {
+    
+    padding: 2rem;
+    border-radius: 10px;
+    display: flex; /* Enable Flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100%; /* Make the container take full height of the viewport */
+    
+    margin: 0 auto; /* Center the container horizontally if there's extra width */
+    color: black;
+    margin-bottom: 50px;
+}
+
+.contactform {
+    background-color:aliceblue;
+    max-width: 800px;
+    margin: 200px 0 50px !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 5px 5px 5px 5px;
+
+}
+
+.contact-page{
+    height: 100%; /* Make sure the body and html take full viewport height */
+    margin: 0 auto; /* Center the container horizontally if there's extra width */
+
+}
+
+.contact-success{
+    padding: 2rem;
+    border-radius: 10px;
+    color: black;
+    margin-bottom: 50px;
+    background-color:aliceblue;
+    max-width: 500px;
+    margin: 300px auto 50px !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}

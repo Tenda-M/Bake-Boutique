@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'contact/contact.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="contact mt-5">
+    <!-- Centered Contact Form -->
+    <div class="row justify-content-center">
+        <div class="contactform col-12 col-md-8 col-lg-6 my-5">
+            <h2 class="mb-4">Contact Us!</h2>
+            <p class="mb-4">If you have any questions related to Bake Boutique, please
+                fill out the form below. We are excited to hear from you and will get back to you as soon as possible!</p>
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }} <!-- Render the form fields properly -->
+                <button class="btn btn-warning" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}
