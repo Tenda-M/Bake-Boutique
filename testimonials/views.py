@@ -4,6 +4,7 @@ from .models import Testimonial
 from django.core.paginator import Paginator
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
+from django.contrib import messages  # Import messages framework
 
 def testimonial_list(request):
     if request.user.is_authenticated:
@@ -33,7 +34,10 @@ def add_testimonial(request):
             testimonial = form.save(commit=False)
             testimonial.user = request.user  # Link testimonial to the logged-in user
             testimonial.save()
+            messages.success(request, "Testimonial added successfully!")  # Success message
             return redirect("testimonial_list")  # Redirect to the testimonials list
+        else:
+            messages.error(request, "There was an error adding your testimonial.")  # Error message
     else:
         form = TestimonialForm()
     return render(request, "testimonials/testimonial_form.html", {"form": form, "page_title": "Add Testimonial"})
@@ -47,7 +51,10 @@ def edit_testimonial(request, id):
         form = TestimonialForm(request.POST, instance=testimonial)
         if form.is_valid():
             form.save()
+            messages.success(request, "Testimonial updated successfully!")  # Success message
             return redirect('testimonial_list')
+        else:
+            messages.error(request, "There was an error updating your testimonial.")  # Error message
     else:
         form = TestimonialForm(instance=testimonial)
     return render(request, 'testimonials/testimonial_form.html', {'form': form, 'page_title': 'Edit Testimonial'})
@@ -59,7 +66,6 @@ def delete_testimonial(request, id):
     testimonial = get_object_or_404(Testimonial, id=id, user=request.user)
     if request.method == 'POST':
         testimonial.delete()
+        messages.success(request, "Testimonial deleted successfully!")  # Success message
         return redirect('testimonial_list')
     return render(request, 'testimonials/confirm_delete.html', {'testimonial': testimonial})
-
-
