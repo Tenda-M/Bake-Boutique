@@ -105,7 +105,26 @@ a.category-badge > span.badge:hover {
 input[name='q']::placeholder {
     color: #aab7c4;
 }
+ 
+/************************* Footer ******************************************/
+footer {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    text-align: center;
+    padding: 20px 0;
+}
 
+footer h2 {
+    margin-bottom: 20px;
+}
+
+#social-networks {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: 20px;
+}
 
 /* ------------------------------- bootstrap toasts */
 
