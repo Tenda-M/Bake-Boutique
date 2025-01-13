@@ -271,15 +271,29 @@ The wishlist feature allows registered users to save products they are intereste
 ---
 
 ### Future Features
-- **Rating System**: Allow users to rate products, with an average rating displayed on each product page.
-- **Advanced Filters**: Add sorting options such as price range, dietary preferences, and popularity.
-- **Social Media Sharing**: Enable users to share their favourite products or testimonials on platforms like Facebook and Instagram.
-
-
 ### Future Adaptations
+#### Future Features for Bake Boutique
 
-- **Recipe Sharing Feature**: Add a community section for users to share their baking recipes.
-- **Social Media Integration**: Enable sharing of products and reviews on platforms like Instagram and Facebook.
+- **Product Rating System**: Future development will include a feature where users can rate products, helping others identify the most popular or highly-rated baked goods.
+
+    - Private users will be able to rate products using a likes or star-rating system.
+    - Each product will display the average rating, calculated from all submitted user ratings.
+    - Users will only be allowed to rate a product once but can update their rating if necessary.
+    - The most highly-rated products will be featured in a "Top Picks" or "Customer Favourites" section.
+
+- **Advanced Product Search**: Users will gain the ability to search for products using advanced filters such as flavour, dietary restrictions, or special occasions.
+
+    - Filters will include options such as flavour (e.g., chocolate, vanilla), dietary restrictions (e.g., vegan, gluten-free), or product type (e.g., birthday cakes, cupcakes, cookies).
+    - Products will be dynamically displayed based on the selected filters, updating the results without needing a full page reload.
+    - Users will be able to apply multiple filters simultaneously to refine their search results (e.g., vegan + chocolate cakes).
+    - A search results counter will display the number of products matching the selected filters.
+
+- **Social Media Product Sharing**: A future feature will allow users to share their favourite products directly on social media platforms, helping expand Bake Boutique's reach and engagement.
+
+    - Private users will be able to share products on platforms like Facebook, Instagram, and Twitter with a single click.
+    - Each product page will include share buttons that generate a unique URL and preview for the social media platform.
+    - Users will receive notifications confirming their successful social media sharing.
+    - Products shared on social media will display the number of shares, showcasing their popularity.
 
 ---
 
@@ -316,10 +330,15 @@ The wishlist feature allows registered users to save products they are intereste
 ![screenshot](documentation/design_images/database.png)
 
 ## Testing
-Manual testing was conducted for all key features, including recipe submission,  edit shared recipes, and commenting functionality. Testing ensures that all components work smoothly on various devices and browsers.
-For all testing, please refer to the [TESTING.md](documentation]TESTING.md) file.
+## Testing
+
+Manual testing was conducted for all key features, including product addition, editing products, and testimonial functionality. This testing ensures that all components work seamlessly across various devices and browsers.
+
+For comprehensive details on the testing process, please refer to the [TESTING.md](documentation/TESTING.md) file.
+
+
 ## Issues and Bugs
-- Resolved issues with recipe form submission.
+- Resolved issues with contact us form submission.
 - Adjusted layout for consistent display of recipe cards.
 - Ongoing improvements for mobile responsiveness.
 
@@ -327,7 +346,7 @@ For all testing, please refer to the [TESTING.md](documentation]TESTING.md) file
 - The application was deployed using Heroku, and the database was configured with PostgreSQL.
 - Cloudinary was integrated to manage image uploads for recipes.
 
-The following steps for creating and configuring a new Python workspace and API credentials have been informed by and adapted from the Python walkthrough project 'Recipe Haven' by [Code Institute's](https://codeinstitute.net/ie/). Please ensure each step is applicable to your project requirements and adjust the provided data accordingly.
+The following steps for creating and configuring a new Python workspace and API credentials have been informed by and adapted from the walkthrough project by [Code Institute's](https://codeinstitute.net/ie/). Please ensure each step is applicable to my project requirements and adjust the provided data accordingly.
 
 ### Creating a new repository 
 <details open>
@@ -368,11 +387,63 @@ The Recipe Haven project was deployed using [Heroku](https://www.heroku.com) and
      - `SECRET_KEY`: A secret key for your Django project.
      - `DEBUG`: Set to `False` for production.
 
-4. **Set Up Cloudinary for Static and Media Files**:
-   - Sign up for a [Cloudinary](https://cloudinary.com) account to store static files and images.
-   - In Heroku’s **Config Vars**, add the following variable:
-     - `CLOUDINARY_URL`: Your Cloudinary API environment variable.
-   - Update your Django settings to handle static and media files via Cloudinary.
+4. **et Up Amazon S3 for Static and Media Files**:
+
+  1. ***Set Up an Amazon S3 Bucket***:
+    - Log in to your [AWS Management Console](https://aws.amazon.com/console/) and navigate to the S3 service.
+    - Create a new S3 bucket:
+      - Choose a unique bucket name (e.g., `bake-boutique-static-media`).
+      - Select a region close to your location.
+    - Configure bucket permissions to allow public access for static files (only if necessary for your use case).
+
+  2. ***Set Up IAM User for Access***:
+    - In the AWS Management Console, go to the **IAM** service.
+    - Create a new IAM user with programmatic access and attach the policy `AmazonS3FullAccess` (or create a custom policy to restrict access to your specific bucket).
+    - Note down the **Access Key ID** and **Secret Access Key**, as they will only be shown once.
+
+  3. ***Add S3 Credentials to Heroku Config Vars***:
+    - Log in to your Heroku dashboard.
+    - Navigate to your app and go to the **Settings** tab.
+    - Under **Config Vars**, add the following variables:
+      - `AWS_ACCESS_KEY_ID`: Your IAM Access Key ID.
+      - `AWS_SECRET_ACCESS_KEY`: Your IAM Secret Access Key.
+      - `AWS_STORAGE_BUCKET_NAME`: The name of your S3 bucket.
+      - `AWS_S3_REGION_NAME`: The region of your S3 bucket (e.g., `us-east-1`).
+      - `AWS_S3_CUSTOM_DOMAIN`: The S3 URL for your bucket (e.g., `https://<bucket-name>.s3.amazonaws.com`).
+
+  4. ***Update Django Settings***:
+    - Install the required dependencies:
+      ```bash
+      pip install boto3 django-storages
+      ```
+    - Add `'storages'` to your `INSTALLED_APPS` in `settings.py`.
+    - Update `settings.py` to configure S3 as the backend for static and media file storage:
+      ```python
+      # AWS S3 Settings
+      AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
+      AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
+      AWS_STORAGE_BUCKET_NAME = os.getenv("AWS_STORAGE_BUCKET_NAME")
+      AWS_S3_REGION_NAME = os.getenv("AWS_S3_REGION_NAME")
+      AWS_S3_CUSTOM_DOMAIN = os.getenv("AWS_S3_CUSTOM_DOMAIN")
+
+      # Static and Media File Storage
+      STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+      DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+      STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/static/'
+      MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/media/'
+      ```
+
+5. **Collect Static Files**:
+   - Run the following command to collect all static files and upload them to S3:
+     ```bash
+     python manage.py collectstatic
+     ```
+
+6. **Test the Integration**:
+   - Ensure that all static and media files are being served correctly from your S3 bucket.
+   - Verify the file uploads and permissions for both static and media assets.
+
 
 5. **Prepare Your Application for Deployment**:
    - Make sure you have a `Procfile` in the root of your project, specifying how Heroku should run your app:
@@ -417,7 +488,7 @@ A copy of the original repository can be made through GitHub. Please follow the 
 
 A local clone of this repository can be made on GitHub. Please follow the below steps:
 1. Go to GitHub and sign in.
-2. You can find the [Recipe Haven Repository](https://github.com/Tenda-M/recipe-haven) at this address.
+2. You can find the [Bake Boutique Repository](https://github.com/Tenda-M/Bake-Boutique) at this address.
 3. Above the section containing repository files, locate the '**Code**' button.
 4. Click on it and select your preferred cloning method from HTTPS, SSH, or GitHub CLI. Copy the URL to your clipboard using the '**Copy**' button.
 5. Launch your Git Bash Terminal.
