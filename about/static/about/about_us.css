@@ -23,4 +23,59 @@ html, body {
     text-align: center; /* Center-align text */
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
+    margin-top: 150px;
+}
+
+/******************** Media Queries for Responsiveness ********************/
+
+/* For devices with a maximum width of 768px (tablets and smaller screens) */
+@media (max-width: 768px) {
+    .wishlist-card {
+        margin: 100px 20px 5px; /* Reduce margins for smaller screens */
+        padding: 10px;
+        max-width: 90%; /* Adjust width for smaller screens */
+    }
+
+    .wishlist-actions {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 5px; /* Reduce spacing between buttons */
+    }
+
+    .remove-link {
+        font-size: 0.9rem; /* Adjust button font size */
+        padding: 5px 8px; /* Reduce padding */
+    }
+}
+
+/* For devices with a maximum width of 576px (mobile phones) */
+@media (max-width: 576px) {
+    .wishlist-card {
+        margin: 50px 10px 5px; /* Further reduce margins for mobile devices */
+        padding: 8px;
+    }
+
+    .wishlist-actions {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 5px; /* Reduce spacing between buttons */
+    }
+
+    .remove-link {
+        font-size: 0.8rem; /* Adjust button font size further */
+        padding: 4px 6px; /* Reduce padding further */
+    }
+}
+
+/* For devices with a maximum width of 400px (small mobile phones) */
+@media (max-width: 400px) {
+    .wishlist-card {
+        margin: 30px 5px 5px; /* Narrow margins for small screens */
+        padding: 5px;
+    }
+    .remove-link {
+        font-size: 0.7rem; /* Smaller font size for tiny screens */
+        padding: 3px 5px; /* Minimal padding */
+    }
+    .about-us-content {
+        margin-top: 350px;
+    }
 }

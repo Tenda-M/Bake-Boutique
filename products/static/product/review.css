@@ -151,4 +151,62 @@
     font-weight: bold;
 }
 
-/******************** Media query for responsiveness ********************/
+/******************** Media Queries for Responsiveness ********************/
+
+/* For devices with a maximum width of 768px (tablets and smaller screens) */
+@media (max-width: 768px) {
+    .review-container {
+        flex-direction: column;
+    }
+
+    .edit-card,
+    .delete-card {
+        margin: 300px auto;
+        padding: 20px;
+        max-width: 90%; /* Adjust to fit smaller screens */
+    }
+
+    .review-card {
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+}
+
+/* For devices with a maximum width of 576px (mobile phones) */
+@media (max-width: 576px) {
+    .review-section,
+    .review-form,
+    .review-card {
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .edit-card,
+    .delete-card {
+        padding: 15px;
+    }
+
+    .btn {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+}
+
+/* For devices with a maximum width of 400px (small mobile phones) */
+@media (max-width: 400px) {
+    .edit-card,
+    .delete-card {
+        margin: 300px auto;
+        padding: 10px;
+    }
+
+    .btn {
+        font-size: 0.7rem;
+        padding: 4px 8px;
+    }
+}

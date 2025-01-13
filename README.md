@@ -1,6 +1,6 @@
 # Bake Boutique
 
-![mock-up images](docs/readme/responsive.PNG "Website preview at different resolutions")
+![mock-up images](documentation/design_images/responsive.png "Website preview at different resolutions")
 
 [View The Live Project Here](https://my-project4-bake-boutique-8d47b339b2ab.herokuapp.com/) <!-- Add link to live site here -->
 

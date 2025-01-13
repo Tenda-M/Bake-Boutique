@@ -41,7 +41,77 @@
 }
 
 .wishlist-actions {
-    display: flex;         /* This makes the buttons appear side by side */
-    gap: 10px;             /* Adds space between the buttons */
+    display: flex;/* This makes the buttons appear side by side */
+    gap: 10px; /* Adds space between the buttons */
     align-items: center;   /* Vertically centers the buttons */
+}
+
+/******************** Media Queries for Responsiveness ********************/
+
+/* For devices with a maximum width of 768px (tablets and smaller screens) */
+@media (max-width: 768px) {
+    .review-container {
+        flex-direction: column;
+    }
+
+    .edit-card,
+    .delete-card {
+        margin: 50px auto;
+        padding: 20px;
+        max-width: 90%; /* Adjust to fit smaller screens */
+    }
+
+    .review-card {
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+
+    .wishlist-card{
+        margin: 300px 30px 5px; /* spacing with the rest of the site */
+    }
+}
+
+/* For devices with a maximum width of 576px (mobile phones) */
+@media (max-width: 576px) {
+    .review-section,
+    .review-form,
+    .review-card {
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .edit-card,
+    .delete-card {
+        padding: 15px;
+    }
+
+    .btn {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+    .wishlist-card{
+        margin: 300px 30px 5px; /* spacing with the rest of the site */
+    }
+}
+
+/* For devices with a maximum width of 400px (small mobile phones) */
+@media (max-width: 400px) {
+    .edit-card,
+    .delete-card {
+        margin: 30px auto;
+        padding: 10px;
+    }
+
+    .btn {
+        font-size: 0.7rem;
+        padding: 4px 8px;
+    }
+    .wishlist-card{
+        margin: 300px 30px 5px; /* spacing with the rest of the site */
+    }
 }

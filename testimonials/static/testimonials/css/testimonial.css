@@ -153,7 +153,7 @@
 
 /* Styling for the heading */
 .delete-confirmation h1 {
-    font-size: 2rem;
+    font-size: 1rem;
     font-weight: bold;
     margin-bottom: 20px;
 }
@@ -196,8 +196,6 @@
     background-color: #5a6268;
 }
 
-
-
 /*Public testimonial page */
 .log-in-message {
     color: black; /* Change to any desired color */
@@ -205,28 +203,6 @@
     font-size: 1.1rem; /* Optional, to adjust the size */
 }
 
-
-/******************** Media query for responsiveness ********************/
-@media (max-width: 1024px) {
-    .testimonial-section .testimonial-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium-sized screens */
-    }
-}
-
-@media (max-width: 768px) {
-    .testimonial-section .testimonial-grid {
-        grid-template-columns: 1fr; /* Single column on small screens */
-    }
-    .testimonial-section {
-        margin-top: 60px; /* Adjust for smaller screens */
-    }
-}
-
-@media (max-width: 576px) {
-    .testimonial-section .testimonial-grid {
-        grid-template-columns: 1fr; /* Single column on very small screens */
-    }
-}
 
 /************************************************************************************/
 /******************************* Add Testimonial Page Styles ************************/
@@ -240,6 +216,11 @@
     padding: 40px;
     border-radius: 8px;
     background: none !important; /* Force removal of all background images */
+}
+
+.add-testimonial-page{
+    height: 100%; /* Make sure to take full viewport height */
+    margin: 0; /* Remove default margin */
 }
 
 /* Heading styling */
@@ -266,7 +247,7 @@
 
 /* Label text */
 .add-testimonial-section form label {
-    font-size: 1em;
+    font-size: 2em;
     font-weight: bold;
     color: #000; /* Black text for readability */
     display: block;
@@ -338,16 +319,63 @@
     color: white;
 }
 
-
-/* Media query for smaller screens */
-@media (max-width: 576px) {
-    .add-testimonial-section {
-        margin-top: 100px; /* Adjust spacing for smaller screens */
-        padding: 20px; /* Reduce padding */
+/******************** Media query for responsiveness ********************/
+@media (max-width: 1024px) {
+    .testimonial-section .testimonial-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium-sized screens */
     }
-
-    .add-testimonial-section form {
-        max-width: 90%; /* Form adapts to smaller screens */
-        padding: 15px;
+    .testimonial-section {
+        margin-top: 250px; /* Adjust for smaller screens */
+    }
+    .delete-confirmation {
+        margin-top: 200; /* Reset top margin */
+    }
+    .add-testimonial-section  {
+        margin-top: 250px;
+    }
+    .delete-confirmation-page{
+        height: 100%; /* Make sure to take full viewport height */
+        margin: 0; /* Remove default margin */
     }
 }
+
+
+
+@media (max-width: 768px) {
+    .testimonial-section .testimonial-grid {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+    .testimonial-section {
+        margin-top: 250px; /* Adjust for smaller screens */
+    }
+    .delete-confirmation {
+        margin-top: 200; /* Reset top margin */
+    }
+    .add-testimonial-section {
+        margin-top: 250px;
+    }
+    .delete-confirmation-page{
+        height: 100%; /* Make sure to take full viewport height */
+        margin: 0; /* Remove default margin */
+    }
+}
+
+@media (max-width: 576px) {
+    .testimonial-section .testimonial-grid {
+        grid-template-columns: 1fr; /* Single column on very small screens */
+    }
+    .testimonial-section {
+        margin-top: 250px; /* Adjust for smaller screens */
+    }
+    .delete-confirmation {
+        margin-top: 200; /* Reset top margin */
+    }
+    .add-testimonial-section {
+        margin-top: 250px;
+    }
+    .delete-confirmation-page{
+        height: 100%; /* Make sure to take full viewport height */
+        margin: 0; /* Remove default margin */
+    }
+}
+ 
