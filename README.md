@@ -2,7 +2,7 @@
 
 ![mock-up images](docs/readme/responsive.PNG "Website preview at different resolutions")
 
-[View The Live Project Here](https://bake-boutique.herokuapp.com/) <!-- Add link to live site here -->
+[View The Live Project Here](https://my-project4-bake-boutique-8d47b339b2ab.herokuapp.com/) <!-- Add link to live site here -->
 
 ## Purpose of the Project
 
@@ -33,6 +33,22 @@ Bake Boutique is an e-commerce platform designed to provide users with a seamles
 10. [Acknowledgements](#Acknowledgements)
 
 ---
+## Introduction
+Bake Boutique
+
+Welcome to Bake Boutique! An e-commerce platform where users can discover, customise, and purchase exquisite baked goods for every occasion.
+
+### Scenario
+
+In today’s fast-paced world, finding the perfect baked treat for celebrations, events, or personal indulgence has never been more convenient. Bake Boutique bridges the gap between traditional bakeries and online shopping, offering a wide range of cakes, cupcakes, and cookies to delight every customer.
+
+Consider Bake Boutique as the ultimate destination for those who value the art of baking and enjoy the luxury of customising their orders to suit their unique needs. Whether you're planning a wedding, a birthday celebration, or simply craving a sweet treat, Bake Boutique makes the process seamless and enjoyable.
+
+Bake Boutique’s user-friendly platform allows customers to browse a curated selection of baked goods, view detailed product descriptions, and place orders with ease. Registered users can access additional features such as wishlists cakes and other products.
+
+In a world where time is precious, Bake Boutique offers the convenience of exploring, selecting, and purchasing baked goods online, all from the comfort of your home. Whether you're looking for a simple dessert or an elaborate centerpiece for your special event, Bake Boutique provides a delightful shopping experience for every occasion. 
+
+With this vision in mind, let’s explore Bake Boutique together!
 
 ## UX
 
