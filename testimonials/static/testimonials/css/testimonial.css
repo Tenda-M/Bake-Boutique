@@ -125,7 +125,12 @@
 }
 
 /* *****Style for the delete confirmation page *********/
-/* Center the delete confirmation box on the page */
+
+.delete-confirmation-page{
+    height: 100%; /* Make sure to take full viewport height */
+    margin: 0; /* Remove default margin */
+}
+
 .delete-confirmation {
     margin-top: 0; /* Reset top margin */
     display: flex;

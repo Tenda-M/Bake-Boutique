@@ -6,35 +6,36 @@
 
 
 {% block content %}
-    <div class="wishlist-card ">
-        <h1>Your Wishlist</h1>
-        <ul>
-            {% for item in wishlist_items %}
-                <li class="wishlist-list">
-                    <a href="{% url 'products:product_detail' item.product.id %}">{{ item.product.name }}</a>
-                    <!-- Wrapping remove and add-to-bag buttons in a div to make them side by side -->
-                    <div class="wishlist-actions">
-                        <a class="remove-link" href="{% url 'wishlist:remove_from_wishlist' item.product.id %}">Remove</a>
-                     
-                        {% if item.product.id %}
-                        <form method="POST" action="{% url 'bag:add_to_bag' item.product.id %}">
-                            {% csrf_token %}
-                            <input type="hidden" name="quantity" value="1"> <!-- Default quantity if not provided -->
-                            <input type="hidden" name="redirect_url" value="{{ request.path }}"> <!-- Redirect back to the wishlist page -->
-                            <button class="wishlist-bag" type="submit">Add to bag</button>
-                        </form>
+    <div class="wishlist-page ">
+        <div class="wishlist-card ">
+            <h1>Your Wishlist</h1>
+            <ul>
+                {% for item in wishlist_items %}
+                    <li class="wishlist-list">
+                        <a href="{% url 'products:product_detail' item.product.id %}">{{ item.product.name }}</a>
+                        <!-- Wrapping remove and add-to-bag buttons in a div to make them side by side -->
+                        <div class="wishlist-actions">
+                            <a class="remove-link" href="{% url 'wishlist:remove_from_wishlist' item.product.id %}">Remove</a>
                         
-                        {% else %}
-                            <p>Product ID missing</p>
-                        {% endif %}
-                    </div>
-                </li>
-            {% empty %}
-                <li>Your wishlist is empty.</li>
-            {% endfor %}
-        </ul>
+                            {% if item.product.id %}
+                            <form method="POST" action="{% url 'bag:add_to_bag' item.product.id %}">
+                                {% csrf_token %}
+                                <input type="hidden" name="quantity" value="1"> <!-- Default quantity if not provided -->
+                                <input type="hidden" name="redirect_url" value="{{ request.path }}"> <!-- Redirect back to the wishlist page -->
+                                <button class="wishlist-bag" type="submit">Add to bag</button>
+                            </form>
+                            
+                            {% else %}
+                                <p>Product ID missing</p>
+                            {% endif %}
+                        </div>
+                    </li>
+                {% empty %}
+                    <li>Your wishlist is empty.</li>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
-
 
 {% endblock %}
 

@@ -4,31 +4,6 @@
 
 }
 /**********************************Keep shopping, Add to bag and Wishlist buttons  *****************************************/
-/*.button-container {
-    display: flex;
-    justify-content: space-between;  /* Align buttons evenly with equal space between them 
-    gap: 20px; /* Space between the buttons 
-    align-items: center; /* Vertically center the buttons 
-    margin-top: 20px; /* Optional: space above the container 
-}
-
-.keep-shopping-btn {
-    flex: 1; /* Allow this button to take the available space 
-}
-
-.add-to-wishlist-btn {
-    flex: 1; /* Allow this button to take the available space 
-}
-
-.add-to-bag-btn {
-    flex: 1; /* Allow this button to take the available space 
-}
-
-/* Additional margin for better spacing between the buttons *
-.button-container .btn {
-    margin: 0 10px;
-}*/
-
 #notification {
     background-color: #dff0d8;
     padding: 10px;
@@ -100,14 +75,17 @@
 
 
 /******************************* Edit Review Page Styles ************************/
+.container-edit-review {
+    height: 100%; /* Make sure to take full viewport height */
+    margin: 0; /* Remove default margin */
+}
 .edit-card{
-    margin-top: 400px; /* Align spacing with the rest of the site */
+    margin: 200px auto; /* Align spacing with the rest of the site */
     display: flex;
     flex-direction: column;
     justify-content: center; /* Center vertically */
     top: 50%; /* Center vertically */
     left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Offset to truly center */
     padding: 10px; /* Add padding for spacing */
     border-radius: 8px; /* Rounded corners */
     background-color: #f8f8f8; /* Light background color */
@@ -120,16 +98,18 @@
 }
 
 /******************************* Delete Review Page Styles ************************/
+.container-delete-review{
+    height: 100%; /* Make sure to take full viewport height */
+    margin: 0; /* Remove default margin */
+}
 .delete-card{
-    margin-top: 300px; /* Align spacing with the rest of the site */
+    margin: 200px auto; /* Align spacing with the rest of the site */
     display: flex;
     flex-direction: column;
     justify-content: center; /* Center vertically */
     align-items: center; /* Center horizontally */
-    /* position: absolute; /* Position it relative to the viewport */
     top: 50%; /* Center vertically */
     left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Offset to truly center */
     padding: 40px; /* Add padding for spacing */
     border-radius: 8px; /* Rounded corners */
     background-color: #f8f8f8; /* Light background color */

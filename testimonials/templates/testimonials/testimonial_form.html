@@ -10,7 +10,7 @@
     <form method="post">
         {% csrf_token %}
         <div class="form-group">
-            <label for="name">Your Name</label>
+            <label for="name"></label>
             {{ form.name }}
             {% if form.name.errors %}
             <div class="text-danger">

@@ -107,23 +107,174 @@ All detailed user stories can be found in a linked GitHub project [here](https:/
 
 A warm palette inspired by baked goods was selected. Soft tones combined with bold accents create a visually appealing aesthetic that resonates with the theme of a bakery.
 
+
+I used [coolors.co](https://coolors.co/000000-333333-ffffff-d2691e-e67e22-c15418-d35400-263e21) to generate my colour palette.
+
+![screenshot](documentation/design_images/coolors.png)
+
 ---
 
 ## Features
 
 ### Design Features
+- A modern, responsive design that adapts to various screen sizes.
+- Flexbox-based layout for product cards ensuring consistent alignment.
+- Interactive navigation, including a dropdown menu for FAQ and About sections.
 
-- A responsive homepage showcasing featured products and offers.
-- Dropdown navigation for easy browsing by category.
+---
 
 ### Existing Features
 
-- **Homepage**: Displays featured products and categories.
-- **About Us Page**: Introduces the platform's story and mission.
-- **Contact Us Page**: Enables users to reach out via a simple form.
-- **Product Pages**: Showcases detailed descriptions, pricing, and customization options.
-- **Wishlist**: Allows logged-in users to save products for future purchases.
-- **Order Management**: Users can view their order history and track statuses.
+#### Public User Features
+
+- **Homepage**
+  - The homepage prominently displays products such as cakes, cookies, and cupcakes. Each product card includes an image, product title, description, and price, arranged in a grid layout for easy browsing.
+  - The "Shop Now" button allows users to navigate directly to the product categories.
+
+  ![screenshot](documentation/features/home.png)
+
+- **About Us Page**
+  - The About page features a welcoming message from the Bake Boutique team, explaining the mission and vision of the platform. It provides an overview of the brand’s dedication to quality and customer satisfaction.
+  - The design is simple, with warm colours and inviting text to engage users.
+
+  ![screenshot](documentation/features/about.png)
+
+- **Contact Page**
+  - The Contact Us page provides a clean and simple contact form, allowing users to reach out with questions, feedback, or suggestions. The form includes fields for Name, Email, and Message, ensuring clear communication.
+  - A prominent "Submit" button is available for users to send their messages directly to the team.
+
+  ![screenshot](documentation/features/contact.png)
+
+- **Register Page**
+  - The Register page enables users to create an account by filling out fields for Username, Email, and Password. A "Sign Up" button is clearly visible, and links are available for users who need to log in.
+
+  ![screenshot](documentation/features/register.png)
+
+- **Login Page**
+  - The Login page provides a simple form for users to sign in using their Username and Password. Users can also select "Remember Me" to stay logged in, and there are links to register or reset the password for easy navigation.
+
+  ![screenshot](documentation/features/login.png)
+
+- **Product Details Page**
+  - Each product has a detailed page displaying its description, available sizes, and price. Users can select quantity and size options before adding items to their bag.
+
+  ![screenshot](documentation/features/product_detail.png)
+
+  - **Testimonial Page**
+  - Public users can not submit testimonials. Testimonials are displayed after admin approval, showcasing genuine feedback from customers.
+  ![screenshot](documentation/features/testimonial_page_public.png)
+
+- **Category Pages**
+  - **Cakes Page**: Displays all available cakes with their descriptions and pricing.
+  ![screenshot](documentation/features/cakes.png)
+
+  - **Cookies Page**: Lists all cookies with details about flavour and pricing.
+  ![screenshot](documentation/features/cookies.png)
+
+  - **Cupcakes Page**: Features available cupcakes with options for customisation.
+  ![screenshot](documentation/features/cupcakes.png)
+---
+
+#### Private User Features
+
+- **Testimonial Page**
+  - Logged-in users can submit testimonials about their experience with Bake Boutique. Testimonials are displayed after admin approval, showcasing genuine feedback from customers.
+
+  ![screenshot](documentation/features/testimonial_page.png)
+
+- **Review Section**
+  - Logged-in users can leave reviews on individual product pages. Each review includes a rating and a comment section, allowing customers to provide detailed feedback.
+
+  ![screenshot](documentation/features/review_section.png)
+
+- **Wishlist Page**
+  - Registered users can save products to their wishlist for future purchases. The wishlist displays all saved items with their images and pricing, and users can easily remove items or move them to the shopping bag.
+
+  ![screenshot](documentation/features/wishlist_page.png)
+
+- **Profile Page**
+  - The Profile page allows users to view and manage their account details. Users can see their saved wishlist, past orders, and account settings.
+  - The page is organised with tabs for easy navigation.
+
+  ![screenshot](documentation/features/profile_page.png)
+
+---
+
+#### Admin Features
+
+- **Edit Review Page**
+  - Admins can edit user reviews for clarity or compliance with site guidelines.
+  ![screenshot](documentation/features/edit_review.png)
+
+- **Delete Review Page**
+  - Admins can delete inappropriate or irrelevant reviews.
+  ![screenshot](documentation/features/delete_review.png)
+
+- **Edit Testimonial Page**
+  - Admins have the option to edit submitted testimonials for accuracy.
+  ![screenshot](documentation/features/edit_testimonial.png)
+
+- **Delete Testimonial Page**
+  - Admins can remove testimonials that do not align with Bake Boutique’s policies.
+  ![screenshot](documentation/features/delete_testimonial.png)
+
+- **Product Management**
+  - Admins can add, edit, and delete products from the inventory to keep the store updated.
+  ![screenshot](documentation/features/product_management.png)
+
+#### Notifications
+
+- ***Login Notification***
+  Displays a toast notification when a user logs in successfully.
+  ![Login Notification](documentation/features/login_notification.png)
+
+- ***Logout Notification***
+  Shows a confirmation notification when a user logs out.
+  ![Logout Notification](documentation/features/logout_notification.png)
+
+- ***Order Confirmation Notification***
+  Notifies the user that their order has been successfully placed.
+  ![Order Confirmation Notification](documentation/features/order_confirmation_notification.png)
+
+- ***Testimonial Submission Notification***
+  Confirms that a testimonial has been successfully submitted.
+  ![Testimonial Notification](documentation/features/testimonial_notification.png)
+
+- ***Edit Testimonial Notification***
+  Alerts users when their testimonial has been successfully edited.
+  ![Edit Testimonial Notification](documentation/features/edit_testimonial_notification.png)
+
+- ***Delete Testimonial Notification***
+  Notifies users when their testimonial has been successfully deleted.
+  ![Delete Testimonial Notification](documentation/features/delete_testimonial_notification.png)
+
+#### Reviews
+- ***Edit Review***
+  Allows users to modify their previously submitted reviews.
+  ![Edit Review](documentation/features/edit_review_notification.png)
+
+- ***Delete Review***
+  Enables users to delete reviews they no longer want to display.
+  ![Delete Review](documentation/features/delete_review_notification.png)
+
+#### Wishlist
+The wishlist feature allows registered users to save products they are interested in for later. This feature is private and only visible to the logged-in user.
+
+- ***Add to Wishlist***
+  Users can add products to their wishlist for future purchases.  
+  ![Add to Wishlist](documentation/features/add_to_wishlist_notification.png)
+
+- ***Remove from Wishlist***
+  Users can remove items from their wishlist if they no longer wish to save them.  
+  ![Remove from Wishlist](documentation/features/remove_from_wishlist_notification.png)
+
+---
+
+### Future Features
+- **Rating System**: Allow users to rate products, with an average rating displayed on each product page.
+- **Advanced Filters**: Add sorting options such as price range, dietary preferences, and popularity.
+- **Social Media Sharing**: Enable users to share their favourite products or testimonials on platforms like Facebook and Instagram.
+
 
 ### Future Adaptations
 
