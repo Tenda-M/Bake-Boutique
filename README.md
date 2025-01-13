@@ -51,21 +51,51 @@ In a world where time is precious, Bake Boutique offers the convenience of explo
 With this vision in mind, let’s explore Bake Boutique together!
 
 ## UX
-
 ### User Stories
 
-Bake Boutique was designed with three types of users in mind: 
+Bake Boutique serves three types of users: the site owner (admin), public users, and private users (registered and signed-in users). The following user stories were considered during development:
 
-- **Public Users**:
-  - Browse baked goods and view product details without signing in.
-  - Access the "About Us" and "Contact Us" pages for more information.
+#### General Features:
+- As a public user, I want to browse the available baked goods without needing to sign up so that I can quickly explore the platform and see what is offered.
+- As a public user, I want to view product details, such as pricing and description.
 
-- **Private Users**:
-  - Create accounts and sign in to access custom features like the wishlist.
-  - Place orders and view order history.
+#### Registration and User Accounts:
+- As a site user, I want to easily register for an account so that I can have a personalised experience.
+- As a site user, I want to log in and out effortlessly so that I can manage my account access.
+- As a site user, I want to receive an email confirmation after registering so that I can verify my account registration was successful.
 
-- **Admin/Staff Users**:
-  - Manage product inventory and customer orders efficiently.
+#### Sorting and Searching:
+- As a shopper, I want to sort products by categories so that I can easily identify the best-rated or priced options.
+- As a shopper, I want to search for a specific product by name or description so that I can quickly find what I am looking for.
+
+#### Purchasing and Checkout:
+- As a shopper, I want to select the size and quantity of a product so that I can customise my order before purchasing.
+- As a shopper, I want to adjust the quantity of items in my bag so that I can make changes before checkout.
+- As a shopper, I want to easily enter my payment information so that the checkout process is quick and secure.
+- As a shopper, I want to receive an email confirmation after checkout so that I can keep a record of my purchase.
+
+#### Wishlist Features:
+- As a registered user, I want to add products to my wishlist so that I can save them for future purchases.
+- As a registered user, I want to view and manage my wishlist so that I can easily purchase or remove items.
+- As a public user, I want to be encouraged to sign up by not having access to the wishlist feature.
+
+#### Reviews:
+- As a registered user, I want to leave reviews on products so that I can share feedback with others.
+- As a visitor, I want to view product reviews so that I can make informed decisions before purchasing.
+- As a site owner, I want to moderate reviews so that only appropriate content is displayed.
+
+#### Testimonial Page:
+- As a user, I want to submit testimonials after contacting Bake Boutique so that I can share my experiences.
+- As a visitor, I want to read testimonials so that I can learn about other customers’ experiences.
+- As a site owner, I want to approve testimonials before displaying them so that only genuine ones are shown.
+
+#### Admin and Store Management:
+- As a store owner, I want to add products to my inventory so that I can expand the store’s offerings.
+- As a store owner, I want to edit or update product details so that I can keep information accurate and current.
+- As a store owner, I want to delete products that are no longer available so that my store remains up-to-date.
+
+All detailed user stories can be found in a linked GitHub project [here](https://github.com/users/Tenda-M/projects/6/views/1).
+
 
 ### Design Thinking
 
