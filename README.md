@@ -310,10 +310,10 @@ The wishlist feature allows registered users to save products they are intereste
 - [Gitpod](https://gitpod.io) is the cloud-based integrated development environment (IDE) used for writing and testing code.
 - [Bootstrap](https://getbootstrap.com) is used to create a responsive front-end design with pre-built components and styling.
 - [Django](https://www.djangoproject.com) is the Python framework used to develop the back-end of the site and manage its functionalities.
-- [PostgreSQL](https://www.postgresql.org) is used as the relational database to store data such as user information and recipes.
+- [PostgreSQL](https://www.postgresql.org) is used as the relational database to store data such as user information.
 - [ElephantSQL](https://www.elephantsql.com) is used to host the PostgreSQL database for production.
 - [Heroku](https://www.heroku.com) is the hosting platform used to deploy and run the live site.
-- [Cloudinary](https://cloudinary.com) is used for managing and hosting static files and images for the site.
+- [amazon s3](https://aws.amazon.com/pm/serv-s3/?gclid=EAIaIQobChMI_6THvsfyigMV9JRQBh3V8RtbEAAYASAAEgIJJ_D_BwE&trk=777b3ec4-de01-41fb-aa63-cde3d034a89e&sc_channel=ps&ef_id=EAIaIQobChMI_6THvsfyigMV9JRQBh3V8RtbEAAYASAAEgIJJ_D_BwE:G:s&s_kwcid=AL!4422!3!638364429346!e!!g!!amazon%20s3!19096959014!142655567183) is used for managing and hosting static files and images for the site.
 
 ### Main Languages Used
 - HTML, CSS, JavaScript for frontend development.
@@ -323,15 +323,13 @@ The wishlist feature allows registered users to save products they are intereste
 ### Frameworks, Libraries & Programs Used
 - Django for backend web development.
 - Bootstrap for responsive design and layout.
-- Cloudinary for image storage.
+- Amazon s3 for image storage.
 
 ## Database Design
 - While planning this project, I drew up an Entity Relationship Diagram to help me visualise the database models and their relationships.
 ![screenshot](documentation/design_images/database.png)
 
 ## Testing
-## Testing
-
 Manual testing was conducted for all key features, including product addition, editing products, and testimonial functionality. This testing ensures that all components work seamlessly across various devices and browsers.
 
 For comprehensive details on the testing process, please refer to the [TESTING.md](documentation/TESTING.md) file.
@@ -339,12 +337,11 @@ For comprehensive details on the testing process, please refer to the [TESTING.m
 
 ## Issues and Bugs
 - Resolved issues with contact us form submission.
-- Adjusted layout for consistent display of recipe cards.
+- Adjusted layout for consistent display of testimonial cards.
 - Ongoing improvements for mobile responsiveness.
 
 ## Deployment
 - The application was deployed using Heroku, and the database was configured with PostgreSQL.
-- Cloudinary was integrated to manage image uploads for recipes.
 
 The following steps for creating and configuring a new Python workspace and API credentials have been informed by and adapted from the walkthrough project by [Code Institute's](https://codeinstitute.net/ie/). Please ensure each step is applicable to my project requirements and adjust the provided data accordingly.
 
@@ -363,7 +360,7 @@ To utilise this template, adhere to these steps:
 </details> 
 
 #### Deploying to Heroku 
-The Recipe Haven project was deployed using [Heroku](https://www.heroku.com) and connected to an external PostgreSQL database hosted on [ElephantSQL](https://www.elephantsql.com). Below is a step-by-step guide to the deployment process:
+The Bake Boutique project was deployed using [Heroku](https://www.heroku.com) and connected to an external PostgreSQL database hosted on [ElephantSQL](https://www.elephantsql.com). Below is a step-by-step guide to the deployment process:
 
 ##### Steps for Deployment:
 
@@ -455,7 +452,7 @@ The Recipe Haven project was deployed using [Heroku](https://www.heroku.com) and
      python manage.py makemigrations
      python manage.py migrate
      ```
-   - Collect static files to be served by Cloudinary:
+   - Collect static files to be served by amazon s3:
      ```bash
      python manage.py collectstatic
      ```
@@ -478,7 +475,7 @@ The Recipe Haven project was deployed using [Heroku](https://www.heroku.com) and
 A copy of the original repository can be made through GitHub. Please follow the below steps to fork this repository:  
 
 1. Visit GitHub and sign in.
-2. After logging in, access this repository using the following link: [Recipe Haven Repository](https://github.com/Tenda-M/recipe-haven).
+2. After logging in, access this repository using the following link: [Bake Boutique Repository](https://github.com/Tenda-M/Bake-Boutique).
 3. Above the file section of the repository and located at the top right of the page, you'll find the '**Fork**' button. Click on it to create a fork of this repository.
 4. You should now find a forked version of this repository in your GitHub account.
 
@@ -498,7 +495,7 @@ A local clone of this repository can be made on GitHub. Please follow the below 
 
 ## Credits
 ### Content
-- Recipe content was provided by the community and contributors.
+- Pictues content was provided by pinterest.
 
 - The Code Institute's 'Codestar' project provides guidance for setting up Google Sheets API and Credentials: [Code Institute](https://codeinstitute.net/ie/)
 
@@ -510,7 +507,11 @@ A local clone of this repository can be made on GitHub. Please follow the below 
 
 - Use of all images [Vecteezy](https://www.vecteezy.com)
 
-- All recipes were taken from the BBC Goodfood website and can be found here [BBC Good Food](https://www.bbc.co.uk/food).
+- Used to create wishlist [Python Django Ecommerce Customer Wish List](https://www.youtube.com/watch?v=OgA0TTKAtqQ).
+
+- Used to create reviews [Creating Reviews and Star Rating Feature in Django](https://www.youtube.com/watch?v=UgEVC7oJDHI).
+
+- Used to create testimonials [Code4Startup](https://code4startup.com/lessons/basic-django-create-testimonial-page-714/).
 
 - HTML, CSS, javascript[mdn](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/email)
 

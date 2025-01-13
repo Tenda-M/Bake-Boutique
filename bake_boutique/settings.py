@@ -22,19 +22,13 @@ if os.path.exists("env.py"):
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-#SECRET_KEY = 'django-insecure-usuhrpivhn4hg3vtn#wg9x4@yojp*)l56tx&#%i-h!8f6h9m#l'
-#SECRET_KEY = os.environ.get('SECRET_KEY', '')
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 #DEBUG = True
 
-#ALLOWED_HOSTS = ['8000-tendam-bakeboutique-iutsyrmxfyg.ws.codeinstitute-ide.net', 'localhost', '127.0.0.1']
+
 
 ALLOWED_HOSTS = [
     '8000-tendam-bakeboutique-iutsyrmxfyg.ws.codeinstitute-ide.net',
@@ -132,7 +126,6 @@ AUTHENTICATION_BACKENDS = [
 
 SITE_ID = 1
 
-#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Allow users to log in with either username or email
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
@@ -268,4 +261,3 @@ else:
     DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
 
 
-#APPEND_SLASH = True  # This is the default value. Change to Fal

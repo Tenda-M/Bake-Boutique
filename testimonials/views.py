@@ -26,6 +26,7 @@ def testimonial_list(request):
     })
 
 
+# Credit: https://code4startup.com/lessons/basic-django-create-testimonial-page-714/
 @login_required
 def add_testimonial(request):
     if request.method == "POST":

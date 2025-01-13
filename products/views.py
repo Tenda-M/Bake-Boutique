@@ -195,6 +195,7 @@ def delete_product(request, product_id):
 
 
 ################### Review #############
+# Credit : https://www.youtube.com/watch?v=UgEVC7oJDHI
 @login_required
 def add_review(request, product_id):
     product = get_object_or_404(Product, id=product_id)
@@ -235,7 +236,6 @@ def edit_review(request, review_id):
         'product_id': review.product.id,
     }
     return render(request, 'products/edit_review.html', context)
-
 
 
 @login_required

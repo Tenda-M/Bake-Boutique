@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils.timezone import now
 
+# Credit: https://code4startup.com/lessons/basic-django-create-testimonial-page-714/
 class Testimonial(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)  # Link to the user
     content = models.TextField()  # Testimonial content

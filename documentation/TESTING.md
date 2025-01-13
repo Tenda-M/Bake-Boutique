@@ -103,10 +103,8 @@ The application performed seamlessly on all browsers without any issues.
 
 ## Known Bugs
 
-After extensive testing, no unresolved bugs were identified in the Bake Boutique application.
+### Responsiveness
 
----
+Bug: Responsiveness Issues
+Issue: Certain pages, did not display properly on smaller screens, with layout elements overlapping or not scaling correctly.
 
-## Responsiveness
-
-The site was tested on various devices, including desktops, tablets, and mobile phones. The responsive design performed flawlessly across all screen sizes, ensuring a consistent user experience.

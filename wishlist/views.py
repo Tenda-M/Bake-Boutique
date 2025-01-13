@@ -6,6 +6,7 @@ from .models import Wishlist
 from django.http import JsonResponse
 from django.shortcuts import get_object_or_404, redirect
 
+# credit: https://www.youtube.com/watch?v=OgA0TTKAtqQ
 @login_required
 def add_to_wishlist(request, product_id):
     # Get the product from the database

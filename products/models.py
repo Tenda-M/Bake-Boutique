@@ -48,6 +48,7 @@ class Product(models.Model):
         return self.name
 
 ################### Review #############
+# Credit : https://www.youtube.com/watch?v=UgEVC7oJDHI
 class Review(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="reviews")
     user = models.ForeignKey(User, on_delete=models.CASCADE)
