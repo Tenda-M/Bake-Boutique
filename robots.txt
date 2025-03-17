@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /bag/
+Disallow: /profile/
+
+Sitemap: https://my-project4-bake-boutique-8d47b339b2ab.herokuapp.com/sitemap.xml
