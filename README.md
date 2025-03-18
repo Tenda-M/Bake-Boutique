@@ -15,6 +15,7 @@ Bake Boutique is an e-commerce platform designed to provide users with a seamles
     1. [User Stories](#User-Stories)
     2. [Design Thinking](#Design-Thinking)
     3. [Colour Scheme](#Colour-Scheme)
+    4. [Content Planning](#Content-Planning)
 3. [Features](#Features)
     1. [Design Features](#Design-Features)
     2. [Existing Features](#Existing-Features)
@@ -112,6 +113,60 @@ I used [coolors.co](https://coolors.co/000000-333333-ffffff-d2691e-e67e22-c15418
 
 ![screenshot](documentation/design_images/coolors.png)
 
+
+### Content Planning for Bake Boutique
+#### Meeting User Needs
+Bake Boutique is designed to provide a seamless and engaging experience for users who want to browse, customise, and purchase baked goods online. The website caters to different types of users, including:  
+
+- **Casual Visitors** looking for visually appealing and easy-to-navigate product pages.  
+- **Returning Customers** who want a quick reordering experience.  
+- **New Customers** who need trust signals, such as reviews, clear product descriptions, and secure checkout options.  
+
+The homepage and key pages are structured to address these needs by offering:  
+
+- **Intuitive Navigation** – Users can easily explore cakes, cupcakes, and cookies.  
+- **Detailed Product Descriptions** – Every item has high-quality images, pricing, and customisation options.  
+- **Seamless Checkout Process** – A smooth, multi-step order process ensures a frustration-free experience.  
+- **Mobile-Friendly Design** – Optimised for different devices to enhance accessibility.  
+
+---
+
+#### Providing Key Information and Features
+To ensure users can find what they need quickly, Bake Boutique provides:  
+
+- **High-Quality Product Images** – Showcasing baked goods in an appealing way.  
+- **Clear Descriptions** – Including ingredients, customisation options, and prices.  
+- **Customer Testimonials** – Displaying reviews to establish trust and credibility.  
+- **Search & Filter Options** – Helping users find specific products quickly.  
+- **Secure Payment Processing** – Offering multiple payment options for convenience.  
+
+---
+
+#### Making Information Easy to Understand
+Bake Boutique ensures clarity in content by:  
+
+- **Simple & Concise Language** – Avoiding unnecessary jargon to improve readability.  
+- **Clear Call-to-Actions (CTAs)** – Buttons and links guide users towards making a purchase or signing up.  
+
+---
+
+#### Demonstrating Expertise & Trustworthiness  
+To establish Bake Boutique as a reliable brand:  
+
+- **Secure Payment & Privacy Policies** assure safe transactions.  
+- **About Page** shares Bake Boutique’s story and expertise in baking.  
+
+---
+
+### SEO & User Engagement Improvements
+To enhance user discovery and search engine ranking:  
+
+- **Keyword Optimisation:** Using relevant baking-related keywords.  
+- **Social Media Integration:** Encouraging shares and customer engagement.  
+- **Email Subscription Options:** Allowing users to receive updates and promotions.  
+
+#### Conclusion
+By focusing on user needs, content clarity, trust signals, and SEO strategies, Bake Boutique ensures a high-quality browsing and shopping experience. This approach not only enhances customer satisfaction but also improves the site's visibility in search engines.  
 ---
 
 ## Features
