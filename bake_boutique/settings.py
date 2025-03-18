@@ -21,12 +21,14 @@ if os.path.exists("env.py"):
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# Load environment variables from .env file for the keys
+load_dotenv()
 
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEVELOPMENT' in os.environ
-#DEBUG = True
+#DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = True
 
 
 
@@ -81,6 +83,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # Required for django-allauth
+    'allauth.account.middleware.AccountMiddleware',
+
 
 ]
 
@@ -149,9 +154,10 @@ WSGI_APPLICATION = 'bake_boutique.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# Database Configuration
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+        'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
     }
 else:
     DATABASES = {
@@ -238,7 +244,7 @@ MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Load environment variables from .env file for the stripe keys
-load_dotenv()
+#load_dotenv()
 
 # Stripe
 FREE_DELIVERY_THRESHOLD = 50
