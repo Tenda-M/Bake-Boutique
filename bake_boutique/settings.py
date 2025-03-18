@@ -83,10 +83,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    # Required for django-allauth
-    'allauth.account.middleware.AccountMiddleware',
-
-
 ]
 
 ROOT_URLCONF = 'bake_boutique.urls'
