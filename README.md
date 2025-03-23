@@ -16,22 +16,24 @@ Bake Boutique is an e-commerce platform designed to provide users with a seamles
     2. [Design Thinking](#Design-Thinking)
     3. [Colour Scheme](#Colour-Scheme)
     4. [Content Planning](#Content-Planning)
-3. [Features](#Features)
+3. [Design](#Design)
+    1. [Wireframes](#Wireframes)
+4. [Features](#Features)
     1. [Design Features](#Design-Features)
     2. [Existing Features](#Existing-Features)
        1. [Public User Features](Public-User-Features)
        2. [Private User Features](Private-User-Features)
        3. [Admin/Staff Features](Admin/Staff-Features)
     3. [Future Adaptations](#Future-Adaptations)
-4. [Technologies Used](#Technologies-Used)
+5. [Technologies Used](#Technologies-Used)
     1. [Main Languages Used](#Main-Languages-Used)
     2. [Frameworks, Libraries & Programs Used](#Frameworks,-Libraries-&-Programs-Used)
-5. [Database Design](#Database_Design)
-6. [Testing](#Testing)
-7. [Issues and Bugs](#Issues-and-Bugs)
-8. [Deployment](#Deployment)
-9. [Credits](#Credits)
-10. [Acknowledgements](#Acknowledgements)
+6. [Database Design](#Database_Design)
+7. [Testing](#Testing)
+8. [Issues and Bugs](#Issues-and-Bugs)
+9. [Deployment](#Deployment)
+10. [Credits](#Credits)
+11. [Acknowledgements](#Acknowledgements)
 
 ---
 ## Introduction
@@ -166,7 +168,30 @@ To enhance user discovery and search engine ranking:
 - **Email Subscription Options:** Allowing users to receive updates and promotions.  
 
 #### Conclusion
-By focusing on user needs, content clarity, trust signals, and SEO strategies, Bake Boutique ensures a high-quality browsing and shopping experience. This approach not only enhances customer satisfaction but also improves the site's visibility in search engines.  
+- By focusing on user needs, content clarity, trust signals, and SEO strategies, Bake Boutique ensures a high-quality browsing and shopping experience. This approach not only enhances customer satisfaction but also improves the site's visibility in search engines.  
+---
+## Design
+
+-   ### Wireframes
+
+    The wireframe diagrams below describe the application web pages.  
+
+    <details>
+    <summary>Desktop Wireframes</summary>
+
+    ![Desktop Wireframes](documentation/wireframes/desktop.png)
+    </details>
+    <details>
+    <summary>Tablet Wireframes</summary>
+
+    ![Tablet Wireframes](documentation/wireframes/ipad.png)
+    </details>
+    <details>
+    <summary>Smartphone Wireframes</summary>
+
+    ![Smartphone Wireframes](documentation/wireframes/smartphone.png)
+    </details>
+
 ---
 
 ## Features

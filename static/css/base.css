@@ -111,24 +111,86 @@ input[name='q']::placeholder {
 }
  
 /************************* Footer ******************************************/
-footer {
-    background-color: #000; /* Black background */
-    color: #fff; /* White text */
-    text-align: center;
-    padding: 20px 0;
+
+.footer {
+   
+    padding: 40px 0;
 }
 
-footer h2 {
-    margin-bottom: 20px;
+/* Headings */
+.footer h2 {
+    font-size: 24px;
+    font-weight: bold;
 }
 
-#social-networks {
-    list-style: none;
-    display: flex;
-    justify-content: center;
+.footer h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Social Links */
+.footer a {
+    color: #007bff;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Privacy Policy Link */
+.privacy-policy-link {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+/* Subscribe Form */
+/* Make email input longer */
+footer form input[type="email"] {
+    width: 60%;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Adjust subscribe button */
+footer form input[type="submit"] {
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+/* Mailchimp Badge Styling */
+
+/* Ensure Mailchimp logo looks like a regular image */
+footer .branding-logo img {
+    text-align:right !important;
+    width: 120px;
+    height: auto;
+    display: block;
+    margin: 10px auto 0;
+    background: none;
+    border: none;
+    box-shadow: none !important;
     padding: 0;
-    margin-bottom: 20px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease-in-out;
 }
+
+/* Prevents Mailchimp link from looking clickable */
+footer .branding-logo a {
+    text-align:right !important;
+    text-decoration: none;
+    display: inline-block;
+    cursor: default;
+}
+
+
 
 /* ------------------------------- bootstrap toasts */
 
