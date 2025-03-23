@@ -42,7 +42,8 @@ The structure and functionality of the Bake Boutique project are inspired by the
        1. [Public User Features](Public-User-Features)
        2. [Private User Features](Private-User-Features)
        3. [Admin/Staff Features](Admin/Staff-Features)
-    3. [Future Adaptations](#Future-Adaptations)
+    3. [SEO, GDPR and Marketing Related Features](SEO-GDPR-and-Marketing-Related-Features)
+    4. [Future Adaptations](#Future-Adaptations)
 5. [Technologies Used](#Technologies-Used)
     1. [Main Languages Used](#Main-Languages-Used)
     2. [Frameworks, Libraries & Programs Used](#Frameworks,-Libraries-&-Programs-Used)
@@ -367,7 +368,73 @@ The wishlist feature allows registered users to save products they are intereste
   ![Remove from Wishlist](documentation/features/remove_from_wishlist_notification.png)
 
 ---
+### SEO, GDPR and Marketing Related Features
 
+#### **SEO**
+
+A number of steps were implemented in the Bake Boutique project to address SEO (Search Engine Optimisation). These included the use of relevant keywords and phrases in the following areas:
+
+- Informative alt tags for all product images  
+- "description" and "keywords" meta tags in the HTML  
+- Appropriate site title and homepage content  
+- Descriptive heading slogan on the homepage  
+
+The process to determine the most useful keywords and phrases included:
+
+- An initial brainstorm of keywords and phrases associated with baked goods and celebrations  
+- Use of Google search auto-complete for discovering related terms and long-tail keywords  
+- Use of keyword research tools such as [wordtracker.com](https://www.wordtracker.com) to refine the keyword list  
+
+**Keywords and phrases identified as most useful include:**  
+*Cakes, cupcakes, cookies, personalised cake, birthday cake, baked goods, custom cakes, sweet treats, dessert delivery, party cake, celebration cake, Bake Boutique, order online, handcrafted bakes, quality ingredients, special occasion, online bakery*
+
+`sitemap.xml` and `robots.txt` files have also been added to the application to assist search engine crawling.
+
+---
+
+#### ** Subscribe to Newsletter**
+
+As part of the web marketing strategy for Bake Boutique, a newsletter subscription feature has been implemented. This allows users to subscribe by entering their email address in the footer section of any page and clicking the **Subscribe** button.
+
+The subscription list is managed via [Mailchimp](https://mailchimp.com), enabling the team to send updates about seasonal offers, new arrivals, and exclusive deals.
+
+**Subscribe to newsletter**  
+![Subscribe](documentation/features/subscription.png)
+
+**Extract of subscriber list**  
+![Subscription List](documentation/features/subscription_list.png)
+
+---
+
+#### **Facebook**
+
+Another key element of the marketing strategy is the use of social media. A Facebook page for Bake Boutique was created to help promote products, showcase new designs, and share seasonal offerings. A link to the Facebook page is included in the footer of every page on the site.
+
+**Bake Boutique Facebook page:**  
+[https://www.facebook.com/BakeBoutique](https://www.facebook.com/profile.php?id=61574437315834)
+
+**Facebook link in site footer**  
+![Company Facebook page](documentation/features/facebook_privacy.png)
+
+**Bake Boutique Facebook page – example 1**  
+![Company Facebook page signed-in User](documentation/features/facebook_user.png)
+
+**Bake Boutique Facebook page – example 2**  
+![Company Facebook page public user](documentation/features/facebook_public.png)
+
+---
+
+#### **Privacy Policy**
+
+To ensure compliance with GDPR requirements, a Privacy Policy was created using [Privacy Policy Generator](https://www.privacypolicygenerator.info/). This policy outlines how customer data is collected, stored, and used. The Privacy Policy is accessible via a link in the footer on every page of the website.
+
+**Privacy Policy link in footer**  
+![Privacy Policy Link](documentation/features/facebook_privacy.png)
+
+**Privacy Policy page**  
+![Privacy Policy](documentation/features/privacy_policy_page.png)
+
+---
 ### Future Features
 ### Future Adaptations
 #### Future Features for Bake Boutique
