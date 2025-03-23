@@ -549,7 +549,7 @@ The Bake Boutique project was deployed using [Heroku](https://www.heroku.com) an
      - `SECRET_KEY`: A secret key for your Django project.
      - `DEBUG`: Set to `False` for production.
 
-4. **et Up Amazon S3 for Static and Media Files**:
+4. **Set Up Amazon S3 for Static and Media Files**:
 
   1. ***Set Up an Amazon S3 Bucket***:
     - Log in to your [AWS Management Console](https://aws.amazon.com/console/) and navigate to the S3 service.
@@ -657,6 +657,14 @@ A local clone of this repository can be made on GitHub. Please follow the below 
 6. Navigate to the directory where you want the cloned directory to be created.
 7. Enter `git clone` followed by pasting the copied URL from step 4.
 8. Hit '**Enter**' to initiate the creation of the local clone.
+
+### Configure STRIPE config vars and webhooks
+
+- Log in to your Stripe account – create one if necessary  
+- Add `STRIPE_PUBLIC_KEY` and `STRIPE_SECRET_KEY` to the Heroku config vars, assigning these variables the values from your Stripe account dashboard  
+- Create a webhook endpoint for use with your application. On the Stripe dashboard, go to the **Developers → Webhooks** section, click **Add Endpoint**, and use the URL of your Heroku application with `/checkout/wh/` appended to the end of the URL string  
+- When configuring the endpoint, the events to register for are: `payment_intent.succeeded` and `payment_intent.failed`  
+- Once the endpoint is set up, obtain the signing secret for the webhooks and save this value as a Heroku config var called `STRIPE_WH_SECRET`
 
 ## Credits
 ### Content
