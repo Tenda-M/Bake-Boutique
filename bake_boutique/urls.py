@@ -35,3 +35,7 @@ urlpatterns = [
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 handler404 = 'bake_boutique.views.handler404'
+handler403 = 'bake_boutique.views.handler403'
+handler405 = 'bake_boutique.views.handler405'
+handler500 = 'bake_boutique.views.handler500'
+

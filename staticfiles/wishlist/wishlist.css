@@ -1,0 +1,117 @@
+.wishlist-page {
+    height: 100%; /* Make sure the body and html take full viewport height */
+    margin: 0; /* Remove default margin */
+}
+
+.wishlist-card{
+    margin: 200px 30px 5px; /* spacing with the rest of the site */
+    padding: 10px; /* Add padding for spacing */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #f8f8f8; /* Light background color */
+    color: #000; /* Neutral text color */
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    max-width: 600px; /* Limit the width of the box */
+    
+}
+
+.wishlist-card wishlist-list{
+    color: #000 !important; /* Neutral text color */
+}
+
+.remove-link {
+    display: inline-block; /* To make it behave like a button */
+    padding: 1px 10px;
+    background-color: white; /* Background color to make it appear like a button */
+    border: 2px solid red; /* Border to outline it */
+    color: red; /* Text color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text for prominence */
+    cursor: pointer;
+}
+
+.remove-link:hover {
+    text-decoration: none; /* Remove underline */
+    color: red; /* Change text color on hover */
+}
+
+
+.wishlist-bag{
+    color: #f8f8f8; /* Neutral text color */
+    background-color: #000;
+}
+
+.wishlist-actions {
+    display: flex;/* This makes the buttons appear side by side */
+    gap: 10px; /* Adds space between the buttons */
+    align-items: center;   /* Vertically centers the buttons */
+}
+
+/******************** Media Queries for Responsiveness ********************/
+
+/* For devices with a maximum width of 768px (tablets and smaller screens) */
+@media (max-width: 768px) {
+    .review-container {
+        flex-direction: column;
+    }
+
+    .edit-card,
+    .delete-card {
+        margin: 50px auto;
+        padding: 20px;
+        max-width: 90%; /* Adjust to fit smaller screens */
+    }
+
+    .review-card {
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+
+    .wishlist-card{
+        margin: 300px 30px 5px; /* spacing with the rest of the site */
+    }
+}
+
+/* For devices with a maximum width of 576px (mobile phones) */
+@media (max-width: 576px) {
+    .review-section,
+    .review-form,
+    .review-card {
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .edit-card,
+    .delete-card {
+        padding: 15px;
+    }
+
+    .btn {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+    .wishlist-card{
+        margin: 300px 30px 5px; /* spacing with the rest of the site */
+    }
+}
+
+/* For devices with a maximum width of 400px (small mobile phones) */
+@media (max-width: 400px) {
+    .edit-card,
+    .delete-card {
+        margin: 30px auto;
+        padding: 10px;
+    }
+
+    .btn {
+        font-size: 0.7rem;
+        padding: 4px 8px;
+    }
+    .wishlist-card{
+        margin: 300px 30px 5px; /* spacing with the rest of the site */
+    }
+}

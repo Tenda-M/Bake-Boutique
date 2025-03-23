@@ -1,0 +1,381 @@
+/******************************* Testimonial Page Styles ************************/
+/* Center the testimonial section on the page */
+.testimonial-section {
+    margin-top: 150px; /* Align spacing with the rest of the site */
+    text-align: center; /* Center the text content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    border-radius: 8px; /* Optional for consistency */
+    min-height: calc(100vh - 200px); /* Adjust height dynamically based on other elements */
+    box-sizing: border-box; /* Ensure padding is included in height calculation */
+    background: none !important; /* Force removal of all background images */
+    color: #000;
+}
+
+/* Center the grid container */
+.testimonial-section .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* Space between cards */
+    justify-content: center; /* Center the grid horizontally */
+    max-width: 1200px; /* Limit the width of the grid */
+    width: 100%;
+}
+
+/* General styling for testimonial cards */
+.testimonial-section .testimonial-card {
+    background: whitesmoke; /* Use the gradient background */
+    border: 1px solid #000000;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(19, 18, 18, 0.9);
+    text-align: center;
+}
+
+.testimonial-section .testimonial-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Styling for testimonial content */
+.testimonial-section .testimonial-content {
+    font-size: 1em;
+    color: black; /* Neutral text color */
+    margin-bottom: 10px;
+}
+
+/* Styling for the author */
+.testimonial-section .testimonial-author {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Badge for approved testimonials */
+.testimonial-section .badge-approved {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 12px;
+    background-color: #28a745; /* Green for approval */
+    color: white;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+/* Pagination styling */
+.testimonial-section .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px; /* Add space above the pagination */
+}
+
+.testimonial-section .pagination a {
+    margin: 0 5px;
+    padding: 8px 12px;
+    background: #f8f8f8;
+    color: black;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.testimonial-section .pagination a:hover,
+.testimonial-section .pagination a.active {
+    background-color: black; /* Match site color */
+    color: white;
+}
+
+/* Button styling to match the site */
+.testimonial-section .btn-primary {
+    background-color: #000; /* Black */
+    border-color: #000;
+    color: white;
+}
+
+.testimonial-section .btn-primary:hover,
+.testimonial-section .btn-primary:focus {
+    background-color: #222; /* Slightly darker black */
+    border-color: #222;
+}
+
+
+/* approval message   */
+.approval-message {
+    color: #d9534f; /* Red color for pending approval message */
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.testimonial-actions {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    gap: 10px; /* Space between the buttons */
+}
+
+.testimonial-actions .btn{
+    font-size: 0.9rem;
+    padding: 5px 12px; /* Adjust button padding for better appearance */
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* *****Style for the delete confirmation page *********/
+
+.delete-confirmation-page{
+    height: 100%; /* Make sure to take full viewport height */
+    margin: 0; /* Remove default margin */
+}
+
+.delete-confirmation {
+    margin-top: 0; /* Reset top margin */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    position: absolute; /* Position it relative to the viewport */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset to truly center */
+    padding: 40px; /* Add padding for spacing */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #f8f8f8; /* Light background color */
+    color: #000; /* Neutral text color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    max-width: 600px; /* Limit the width of the box */
+    text-align: center; /* Align text */
+    box-sizing: border-box; /* Include padding in the width and height */
+}
+
+/* Styling for the heading */
+.delete-confirmation h1 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Styling for the paragraph */
+.delete-confirmation p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Styling for the buttons */
+.delete-confirmation .btn {
+    font-size: 1rem;
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.delete-confirmation .btn-danger {
+    background-color: #dc3545;
+    border: none;
+    color: white;
+}
+
+.delete-confirmation .btn-danger:hover {
+    background-color: #c82333;
+}
+
+.delete-confirmation .btn-secondary {
+    background-color: #6c757d;
+    border: none;
+    color: white;
+}
+
+.delete-confirmation .btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/*Public testimonial page */
+.log-in-message {
+    color: black; /* Change to any desired color */
+    font-weight: bold; /* Optional */
+    font-size: 1.1rem; /* Optional, to adjust the size */
+}
+
+
+/************************************************************************************/
+/******************************* Add Testimonial Page Styles ************************/
+/* Prevent overlap with navbar */
+.add-testimonial-section {
+    margin-top: 150px; /* Push the section below the navbar */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    border-radius: 8px;
+    background: none !important; /* Force removal of all background images */
+}
+
+.add-testimonial-page{
+    height: 100%; /* Make sure to take full viewport height */
+    margin: 0; /* Remove default margin */
+}
+
+/* Heading styling */
+.add-testimonial-section h1 {
+    font-size: 2rem; /* Make heading prominent */
+    font-weight: bold;
+    color: #000; /* Black text for better readability */
+    margin-bottom: 20px; /* Add space below heading */
+}
+
+/* Form styling */
+.add-testimonial-section form {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    background: #fff; 
+    color: white; /* White text for contrast */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 15px rgba(19, 15, 15, 0.9); /* Stronger shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Label text */
+.add-testimonial-section form label {
+    font-size: 2em;
+    font-weight: bold;
+    color: #000; /* Black text for readability */
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+/* Input and textarea styling */
+.add-testimonial-section form input,
+.add-testimonial-section form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    color: #333;
+}
+
+/* Focus state for input and textarea */
+.add-testimonial-section form input:focus,
+.add-testimonial-section form textarea:focus {
+    outline: none;
+}
+
+/* Placeholder text color */
+.add-testimonial-section form input::placeholder,
+.add-testimonial-section form textarea::placeholder {
+    color: #666; /* Slightly muted text color */
+}
+
+/* Submit button styling */
+.add-testimonial-section form button {
+    background-color: black; /* White button for contrast */
+    color: white; /* Top bar color */
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.add-testimonial-section form button:hover {
+    background-color: #222; /* Slightly darker */
+    color: white;
+}
+ /*  form buttons */
+ .form-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Space between buttons */
+    margin-top: 20px; /* Add spacing above buttons */
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    color: white;
+}
+
+/******************** Media query for responsiveness ********************/
+@media (max-width: 1024px) {
+    .testimonial-section .testimonial-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium-sized screens */
+    }
+    .testimonial-section {
+        margin-top: 250px; /* Adjust for smaller screens */
+    }
+    .delete-confirmation {
+        margin-top: 200; /* Reset top margin */
+    }
+    .add-testimonial-section  {
+        margin-top: 250px;
+    }
+    .delete-confirmation-page{
+        height: 100%; /* Make sure to take full viewport height */
+        margin: 0; /* Remove default margin */
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .testimonial-section .testimonial-grid {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+    .testimonial-section {
+        margin-top: 250px; /* Adjust for smaller screens */
+    }
+    .delete-confirmation {
+        margin-top: 200; /* Reset top margin */
+    }
+    .add-testimonial-section {
+        margin-top: 250px;
+    }
+    .delete-confirmation-page{
+        height: 100%; /* Make sure to take full viewport height */
+        margin: 0; /* Remove default margin */
+    }
+}
+
+@media (max-width: 576px) {
+    .testimonial-section .testimonial-grid {
+        grid-template-columns: 1fr; /* Single column on very small screens */
+    }
+    .testimonial-section {
+        margin-top: 250px; /* Adjust for smaller screens */
+    }
+    .delete-confirmation {
+        margin-top: 200; /* Reset top margin */
+    }
+    .add-testimonial-section {
+        margin-top: 250px;
+    }
+    .delete-confirmation-page{
+        height: 100%; /* Make sure to take full viewport height */
+        margin: 0; /* Remove default margin */
+    }
+}
+ 
