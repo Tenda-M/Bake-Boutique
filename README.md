@@ -367,6 +367,26 @@ The wishlist feature allows registered users to save products they are intereste
   Users can remove items from their wishlist if they no longer wish to save them.  
   ![Remove from Wishlist](documentation/features/remove_from_wishlist_notification.png)
 
+#### Error Handling Pages
+
+  Custom error handling pages have been implemented to improve the user experience when unexpected issues occur.
+
+  - **404 - Page Not Found**  
+    Displayed when users navigate to a non-existent page. A visually branded template guides users back to the shop.
+
+  - **403 - Forbidden**  
+    Triggered when users attempt to access restricted content or perform unauthorised actions.
+
+  - **405 - Method Not Allowed**  
+    Returned when a user makes a request using an unsupported HTTP method, such as POSTing to a GET-only view.
+
+  - **500 - Internal Server Error**  
+    Displayed when an unexpected server-side issue occurs. The custom page ensures users are informed gracefully.
+
+  Each page maintains Bake Boutique’s branding and provides a clear call-to-action for users to return to the main shopping experience.
+
+  ![404 Error handling](documentation/features/404.png)
+
 ---
 ### SEO, GDPR and Marketing Related Features
 
