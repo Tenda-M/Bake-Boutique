@@ -2,11 +2,29 @@
 
 ![mock-up images](documentation/design_images/responsive.png "Website preview at different resolutions")
 
-[View The Live Project Here](https://my-project4-bake-boutique-8d47b339b2ab.herokuapp.com/) <!-- Add link to live site here -->
+[View The Live Project Here](https://my-project4-bake-boutique-8d47b339b2ab.herokuapp.com/) <!-- link to live site here -->
 
 ## Purpose of the Project
 
-Bake Boutique is an e-commerce platform designed to provide users with a seamless experience for browsing, customizing, and purchasing baked goods for all occasions. It offers a wide selection of cakes, cupcakes and cookies while allowing users to customize their orders to suit their preferences.
+**Bake Boutique** is a B2C e-commerce application that offers a delightful and seamless experience for customers looking to browse, customise, and purchase baked goods for any occasion. The platform specialises in high-quality cakes, cupcakes, and cookies, with a focus on personalised customisation to suit individual preferences.
+
+The site aims to provide users with an attractive and intuitive shopping experience, encouraging return visits through features such as exclusive discounts, a newsletter subscription, social media engagement, and a user-friendly profile section to save customer details.
+
+Users can browse a wide range of baked products, use filters to narrow down their choices, and view detailed information for each item, including customisation options such as size. Customers can add items to their basket and complete purchases through a secure, single-step checkout process.
+
+General users can view product details, sign up for the Bake Boutique newsletter, and follow the brand on social media for updates and seasonal offers. Registered users benefit from enhanced features such as maintaining a wishlist, saving delivery details, and viewing past order history via their profile.
+
+Admin users can manage product listings and categories, update pricing and availability, add seasonal specials, and edit product descriptions and images. They also have access to customer queries and order management features.
+
+A detailed breakdown of all available site functionality is included in this documentation.
+
+### Web Marketing Strategies
+
+- **Organic Social** – via platforms such as Instagram and Facebook to showcase product visuals and promotions  
+- **Email Marketing** – through a Mailchimp-managed newsletter to inform users about new products, limited-time offers, and events
+
+The structure and functionality of the Bake Boutique project are inspired by the Code Institute’s Boutique Ado walkthrough project, with extended customisation features tailored for the baked goods niche.
+
 
 ## Table Of Contents
 1. [Introduction](#Introduction)
@@ -47,7 +65,7 @@ In today’s fast-paced world, finding the perfect baked treat for celebrations,
 
 Consider Bake Boutique as the ultimate destination for those who value the art of baking and enjoy the luxury of customising their orders to suit their unique needs. Whether you're planning a wedding, a birthday celebration, or simply craving a sweet treat, Bake Boutique makes the process seamless and enjoyable.
 
-Bake Boutique’s user-friendly platform allows customers to browse a curated selection of baked goods, view detailed product descriptions, and place orders with ease. Registered users can access additional features such as wishlists cakes and other products.
+Bake Boutique’s user-friendly platform allows customers to browse a curated selection of baked goods, view detailed product descriptions, and place orders with ease. Registered users can access additional features such as wishlists cakes and the oppotunity to write testimonials.
 
 In a world where time is precious, Bake Boutique offers the convenience of exploring, selecting, and purchasing baked goods online, all from the comfort of your home. Whether you're looking for a simple dessert or an elaborate centerpiece for your special event, Bake Boutique provides a delightful shopping experience for every occasion. 
 
