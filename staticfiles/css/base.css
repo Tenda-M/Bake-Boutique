@@ -9,10 +9,30 @@ html {
 body {
     background: url('/media/homepage_background_cropped.jpeg') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 164px);
+    height:auto;
     color: #555;
     font-family: 'Lato';
 }
+html, body {
+    overflow-x: hidden;
+}
+header .input-group {
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+header input[type="text"] {
+    min-width: 0;
+    width: 100%;
+}
+.mobile-icons-wrapper {
+    position: absolute;
+    top: 80px; /* adjust as needed */
+    right: 0;
+    z-index: 1050;
+    background: transparent;
+}
+
 
 /* from Bulma */
 .icon {
@@ -258,6 +278,8 @@ footer .branding-logo a {
 }
 
 /* -------------------------------- Media Queries ---------------------------------*/
+/* ------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------*/
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
@@ -362,6 +384,10 @@ body .list-inline-item a:hover {
     text-decoration: none;  /* Ensure there's no underline on hover */
 }
 
+/* -------------------------------- Media Queries -------------------------*/
+/* ------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------*/
+
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
@@ -372,21 +398,29 @@ body .list-inline-item a:hover {
         z-index: 1030;
     }
 
-    .header-container {
-        padding-top: 164px;
+    body {
+        padding-top: 164px; /* match your header height */
+        height: auto;
     }
+
+    .header-container {
+        padding-top: 120px !important;
+    }
+    
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
-        padding-top: 116px;
+        padding-top: 200px !important;
     }
 
     body {
-        height: calc(100vh - 116px);
-    }
+        /* height: calc(100vh - 116px);*/
+        padding-top: 116px; /* match your header height */
+        height: auto;
 
+    }
 
     .display-4.logo-font.text-black {
         font-size: 2rem;
