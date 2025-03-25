@@ -1,3 +1,22 @@
+.overlay {
+    /*height: auto;*/
+    min-height: calc(100vh - 150px); /* Ensure it takes up at least the full viewport minus header/footer */
+    padding: 20px; /* Add spacing */
+    box-sizing: border-box;
+    height: 100%; /* Make sure the body and html take full viewport height */
+}
+
+.profile-form{
+    margin: 200px 5px 10px 5px;
+    color: #000 !important;
+}
+.my-profile{
+    margin: 200px 5px 10px 5px;
+    color: #000 !important;
+}
+.order-history table-responsive{
+    color: #000 !important;
+}
 .order-history {
     max-height: 416px; /* height of profile form + submit button */
     overflow-y: auto;
@@ -18,4 +37,74 @@
 
 #id_default_country option:first-child {
     color: #aab7c4;
+}
+
+/*************************** Media q     **************************/
+/* Default CSS applies for large screens (above 1024px width) */
+
+/* Medium Devices (Tablets) - max-width: 1024px */
+@media (max-width: 1024px) {
+    .profile-form {
+        padding: 15px;
+        margin: 10px auto;
+    }
+
+    .order-history {
+        max-height: 350px; /* Reduce height for better view */
+    }
+
+    .order-history table {
+        font-size: 0.9em; /* Reduce font size */
+    }
+
+    #profile-update-form .form-control {
+        font-size: 0.9em; /* Adjust input sizes */
+    }
+}
+
+/* Small Devices (Mobile Landscape) - max-width: 768px */
+@media (max-width: 768px) {
+    .profile-form {
+        margin: 5px auto;
+        padding: 10px;
+        width: 95%; /* Make the form take almost full width */
+    }
+
+    .order-history {
+        max-height: 300px; /* Further reduce height */
+    }
+
+    .overlay {
+        padding: 10px; /* Add padding for content spacing */
+    }
+
+    .order-history table {
+        font-size: 0.85em; /* Further reduce font size */
+    }
+}
+
+/* Extra Small Devices (Mobile Portrait) - max-width: 576px */
+@media (max-width: 576px) {
+    .profile-form {
+        padding: 5px;
+        margin: 5px auto;
+        width: 100%; /* Full width for small screens */
+    }
+
+    .overlay {
+        padding: 5px; /* Reduce padding */
+    }
+
+    .order-history {
+        max-height: 250px; /* Minimal height for very small screens */
+    }
+
+    .order-history table {
+        font-size: 0.8em; /* Minimal font size */
+    }
+
+    #profile-update-form button {
+        font-size: 0.9em; /* Adjust button font size */
+        padding: 5px 10px; /* Smaller padding */
+    }
 }

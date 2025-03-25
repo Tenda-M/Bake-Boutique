@@ -172,13 +172,14 @@
     </div>
     {% endif %}
 
-    <div class="container header-container">
+<main class="container header-container">
     {% block page_header %}
     {% endblock %}
 
     {% block content %}
     {% endblock %}
-</div>
+</main>
+
 
     {% block postloadjs %}
     <script type="text/javascript">
@@ -219,8 +220,7 @@
                 <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
             <style type="text/css">
                 #mc_embed_signup{false;clear:left; font:14px Helvetica,Arial,sans-serif; width:auto;}
-                /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-                    We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+              
             </style>
       <div id="mc_embed_signup">
           <form action="https://herokuapp.us16.list-manage.com/subscribe/post?u=d3b362119ab1b1649c02042b2&amp;id=e5b0bbba54&amp;f_id=00730be0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">

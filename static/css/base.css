@@ -115,8 +115,15 @@ input[name='q']::placeholder {
 .footer {
    
     padding: 40px 0;
+    background-color: #000;
+    width: auto;
+    color: white;
+    text-align: center;
 }
-
+.container-wrapper{
+    background-color: black;
+    margin-top: 20px;
+}
 /* Headings */
 .footer h2 {
     font-size: 24px;
@@ -384,7 +391,7 @@ body .list-inline-item a:hover {
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
-        padding-top: 200px;
+        padding-top: 130px;
     }
 
     body {

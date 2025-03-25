@@ -96,7 +96,16 @@
     box-sizing: border-box; /* Include padding in the width and height */
     box-shadow: 0 4px 6px rgba(19, 18, 18, 0.9);
 }
-
+/* Make the textarea responsive */
+textarea#id_content {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    resize: vertical;
+}
 /******************************* Delete Review Page Styles ************************/
 .container-delete-review{
     height: 100%; /* Make sure to take full viewport height */

@@ -1,18 +1,29 @@
 .overlay {
-    height: auto;
+    /*height: auto;*/
     min-height: calc(100vh - 150px); /* Ensure it takes up at least the full viewport minus header/footer */
     padding: 20px; /* Add spacing */
     box-sizing: border-box;
+    height: 100%; /* Make sure the body and html take full viewport height */
 }
 
 .profile-form{
     margin: 200px 5px 10px 5px;
+    color: #000 !important;
+}
+.my-profile{
+    margin: 200px 5px 10px 5px;
+    color: #000 !important;
+}
+.order-history table-responsive{
+    color: #000 !important;
 }
 .order-history {
     max-height: 416px; /* height of profile form + submit button */
     overflow-y: auto;
 }
-
+.profile-text {
+    color: #000 !important;
+}
 #profile-update-form .form-control {
     color: #000;
 }
